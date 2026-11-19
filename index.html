@@ -1,0 +1,2830 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://uploads.onecompiler.io/4525e2h7x/459m42ekg/Logo%20Laptop%20Premium%20RizkyTech.png" />
+  <title>Rizky Tech — Curated Flagship Laptops & Precision Hardware</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            obsidian: {
+              950: '#090A0F',
+              900: '#11131C',
+              850: '#161924',
+              800: '#1D2130',
+            },
+            champagne: {
+              300: '#F8EFC6',
+              400: '#F3E5AB',
+              500: '#D4AF37',
+              600: '#B59224',
+            },
+            platinum: {
+              100: '#F8FAFC',
+              200: '#E2E8F0',
+              400: '#94A3B8',
+              500: '#64748B',
+            }
+          },
+          boxShadow: {
+            'gold-glow': '0 0 30px -5px rgba(212, 175, 55, 0.22)',
+            'card-elevated': '0 20px 40px -15px rgba(0, 0, 0, 0.7)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #090A0F;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090A0F;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #272B3B;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    /* Glassmorphism Utilities */
+    .glass-nav {
+      background: rgba(9, 10, 15, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .glass-card {
+      background: linear-gradient(145deg, rgba(22, 25, 36, 0.85) 0%, rgba(17, 19, 28, 0.95) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Gold Shimmer Text */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 55%, #AA841E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title-white-shimmer,
+    .hero-title-gold-shimmer {
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: heroTitleShimmer 6s ease-in-out infinite;
+    }
+    .hero-title-white-shimmer {
+      background-image: linear-gradient(105deg, #fff 0%, #fff 38%, #f3e5ab 49%, #fff 58%, #fff 100%);
+    }
+    .hero-title-gold-shimmer {
+      background-image: linear-gradient(105deg, #F3E5AB 0%, #D4AF37 36%, #fff8d9 50%, #D4AF37 64%, #AA841E 100%);
+      animation-delay: 180ms;
+    }
+    @keyframes heroTitleShimmer {
+      0%, 15% { background-position: 100% 0; }
+      55%, 100% { background-position: -120% 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-title-white-shimmer,
+      .hero-title-gold-shimmer { animation: none; }
+      .hero-title-white-shimmer { background-image: none; -webkit-text-fill-color: #fff; }
+      .hero-title-gold-shimmer { background-image: none; -webkit-text-fill-color: #D4AF37; }
+    }
+
+    /* A soft moving highlight for the store mark and wordmark */
+    .logo-shimmer {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .logo-shimmer::after {
+      content: '';
+      position: absolute;
+      inset: -40% auto -40% -65%;
+      width: 42%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.34), transparent);
+      transform: skewX(-22deg);
+      animation: logoSweep 4.8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .brand-name-shimmer,
+    .brand-tagline-shimmer {
+      background-size: 220% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: brandTextShimmer 5s ease-in-out infinite;
+    }
+    .brand-name-shimmer {
+      background-image: linear-gradient(105deg, #fff 0%, #fff 38%, #f3e5ab 49%, #fff 58%, #fff 100%);
+    }
+    .brand-tagline-shimmer {
+      background-image: linear-gradient(105deg, #b59224 0%, #f3e5ab 38%, #fff8d9 50%, #f3e5ab 62%, #b59224 100%);
+      animation-delay: 180ms;
+    }
+    @keyframes logoSweep {
+      0%, 18% { left: -65%; opacity: 0; }
+      28% { opacity: 1; }
+      58%, 100% { left: 125%; opacity: 0; }
+    }
+    @keyframes brandTextShimmer {
+      0%, 15% { background-position: 100% 0; }
+      55%, 100% { background-position: -120% 0; }
+    }
+    .search-entry {
+      animation: searchEntry 850ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+    .search-entry-mobile {
+      animation-delay: 160ms;
+    }
+    @keyframes searchEntry {
+      from { opacity: 0; transform: translateY(-9px); box-shadow: 0 0 0 rgba(212, 175, 55, 0); }
+      55% { box-shadow: 0 0 22px rgba(212, 175, 55, 0.18); }
+      to { opacity: 1; transform: translateY(0); box-shadow: 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    .showcase-orbit {
+      isolation: isolate;
+    }
+    .showcase-orbit::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      padding: 1.5px;
+      border-radius: inherit;
+      background: conic-gradient(from 0deg, transparent 0deg 285deg, rgba(212, 175, 55, 0.18) 310deg, #f8efc6 332deg, #d4af37 344deg, transparent 360deg);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 0;
+      animation: showcaseOrbit 5s linear infinite;
+    }
+    @keyframes showcaseOrbit {
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .showcase-orbit::before { animation: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .logo-shimmer::after,
+      .brand-name-shimmer,
+      .brand-tagline-shimmer,
+      .search-entry {
+        animation: none;
+      }
+      .brand-name-shimmer { background-image: none; -webkit-text-fill-color: #fff; }
+      .brand-tagline-shimmer { background-image: none; -webkit-text-fill-color: #F3E5AB; }
+    }
+
+    .btn-gold-gradient {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #B89122 100%);
+      color: #090A0F;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-gold-gradient:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Hide scrollbar for horizontal category pills */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Subtle radial ambient glow */
+    .hero-glow {
+      background: radial-gradient(circle at 75% 20%, rgba(212, 175, 55, 0.12) 0%, rgba(17, 19, 28, 0) 55%),
+                  radial-gradient(circle at 15% 80%, rgba(226, 232, 240, 0.05) 0%, rgba(9, 10, 15, 0) 50%);
+    }
+
+    @keyframes pulseBorder {
+      0%, 100% { border-color: rgba(212, 175, 55, 0.45); }
+      50% { border-color: rgba(243, 229, 171, 0.9); }
+    }
+    .recommended-highlight {
+      animation: pulseBorder 2.2s infinite ease-in-out;
+      box-shadow: 0 0 35px -8px rgba(212, 175, 55, 0.35);
+    }
+
+    /* Reveal content as it enters the viewport while scrolling */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(24px) scale(0.985);
+      transition: opacity 650ms ease, transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal,
+      .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+      }
+    }
+
+    .welcome-backdrop {
+      animation: welcomeFadeIn 350ms ease-out both;
+    }
+    .welcome-card {
+      animation: welcomeRiseIn 500ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+    @keyframes welcomeFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes welcomeRiseIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .welcome-backdrop,
+      .welcome-card { animation: none; }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-champagne-500 selection:text-obsidian-950">
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div id="toastContainer" class="fixed top-20 right-4 z-[90] flex flex-col gap-2.5 max-w-sm w-full pointer-events-none"></div>
+
+  <!-- ==================== WELCOME POPUP ==================== -->
+  <div id="welcomeModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md welcome-backdrop" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" aria-describedby="welcomeDescription" onclick="if(event.target === this) closeWelcomeModal()">
+    <div class="welcome-card relative w-full max-w-lg overflow-hidden rounded-3xl border border-champagne-500/35 bg-obsidian-900 shadow-card-elevated">
+      <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.18),transparent_55%)]"></div>
+      <button type="button" onclick="closeWelcomeModal()" aria-label="Tutup sambutan" class="absolute top-4 right-4 z-10 p-2 rounded-xl bg-black/20 hover:bg-white/10 text-platinum-300 hover:text-white transition">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+      <div class="relative p-7 sm:p-10 text-center">
+        <div class="logo-shimmer mx-auto mb-5 w-16 h-16 rounded-2xl bg-gradient-to-br from-champagne-300 via-champagne-500 to-champagne-600 p-[1px] shadow-gold-glow">
+          <div class="w-full h-full bg-obsidian-950 rounded-[15px] flex items-center justify-center">
+            <i data-lucide="cpu" class="w-7 h-7 text-champagne-400"></i>
+          </div>
+        </div>
+        <p class="text-[10px] sm:text-xs font-mono uppercase tracking-[0.28em] text-champagne-400">Luxury Hardware Atelier</p>
+        <h2 id="welcomeTitle" class="mt-3 text-2xl sm:text-3xl font-extrabold text-white">Selamat datang di <span class="text-gold-gradient">Rizky Tech</span></h2>
+        <p id="welcomeDescription" class="max-w-sm mx-auto mt-3 text-sm leading-relaxed text-platinum-300">Temukan laptop pilihan untuk kerja, kreasi, dan hiburan—dikurasi dengan teliti untuk menemani setiap langkah Anda.</p>
+        <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+          <button type="button" onclick="closeWelcomeModal(); document.getElementById('katalog').scrollIntoView({ behavior: 'smooth' })" class="btn-gold-gradient px-6 py-3 rounded-xl text-sm font-bold inline-flex items-center justify-center gap-2">
+            <span>Jelajahi Katalog</span>
+            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+          </button>
+          <button type="button" onclick="closeWelcomeModal()" class="px-6 py-3 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] text-sm font-semibold text-platinum-200 transition">Mulai Menjelajah</button>
+        </div>
+        <p class="mt-5 text-[10px] font-mono tracking-wider text-platinum-500">PRESISI • KUALITAS • KETENANGAN</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 1. STICKY SMART HEADER & SEARCH ==================== -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-6">
+        
+        <!-- Brand Logo -->
+        <a href="#top" onclick="resetAllFilters()" class="flex items-center gap-3 shrink-0 group">
+          <div class="logo-shimmer w-10 h-10 rounded-xl bg-gradient-to-br from-champagne-400 via-champagne-500 to-champagne-600 p-[1px] shadow-gold-glow">
+            <div class="w-full h-full bg-obsidian-950 rounded-[11px] flex items-center justify-center group-hover:bg-obsidian-900 transition">
+              <i data-lucide="cpu" class="w-5 h-5 text-champagne-500"></i>
+            </div>
+          </div>
+          <div>
+            <span id="headerStoreName" class="brand-name-shimmer block text-base sm:text-lg font-extrabold tracking-wider text-white uppercase">Rizky Tech</span>
+            <span id="headerStoreTagline" class="brand-tagline-shimmer hidden sm:block text-[10px] font-mono uppercase tracking-[0.2em] text-champagne-400/80">Luxury Hardware Atelier</span>
+          </div>
+        </a>
+
+        <!-- Desktop Real-Time Search Bar -->
+        <div class="hidden md:flex flex-1 max-w-xl relative">
+          <div class="relative w-full">
+            <i data-lucide="search" class="w-4 h-4 text-platinum-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+            <input 
+              type="text" 
+              id="desktopSearchInput"
+              class="search-entry w-full bg-obsidian-900/90 border border-white/10 focus:border-champagne-500/70 focus:ring-2 focus:ring-champagne-500/20 rounded-xl pl-10 pr-10 py-2.5 text-sm text-platinum-100 placeholder-platinum-500 outline-none transition"
+
+              oninput="handleSearch(this.value)"
+              placeholder="Cari seri laptop, prosesor (M3 Max, Ryzen 9, Ultra 7), RAM, kategori..." 
+              class="search-entry w-full bg-obsidian-900/90 border border-white/10 focus:border-champagne-500/70 focus:ring-2 focus:ring-champagne-500/20 rounded-xl pl-10 pr-10 py-2.5 text-sm text-platinum-100 placeholder-platinum-500 outline-none transition"
+            />
+            <button id="clearSearchDesktop" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-platinum-400 hover:text-white">
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <!-- WhatsApp Consultation Quick Button -->
+          <button 
+            onclick="openDirectWAConsultation()"
+            class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-xs font-semibold text-platinum-200 transition"
+            title="Konsultasi Spesifikasi via WhatsApp"
+          >
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Konsultasi</span>
+          </button>
+
+          <!-- Cart Trigger Button -->
+          <button 
+            onclick="toggleCartDrawer(true)"
+            class="relative inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-obsidian-850 hover:bg-obsidian-800 border border-champagne-500/30 text-xs sm:text-sm font-semibold text-champagne-300 transition shadow-sm"
+            aria-label="Buka Keranjang Belanja"
+          >
+            <i data-lucide="shopping-bag" class="w-4 h-4 text-champagne-500"></i>
+            <span class="hidden sm:inline">Keranjang</span>
+            <span id="cartBadge" class="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-[11px] font-mono font-bold rounded-full bg-champagne-500 text-obsidian-950">0</span>
+          </button>
+
+          <!-- Subtle Admin Mode Trigger -->
+          <button 
+            onclick="openAdminAccess()"
+            class="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 text-platinum-400 hover:text-champagne-400 transition"
+            title="Mode Admin / Kelola Katalog (#admin)"
+            aria-label="Mode Admin"
+          >
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div class="md:hidden pb-3">
+        <div class="relative w-full">
+          <i data-lucide="search" class="w-4 h-4 text-platinum-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                      <input 
+              type="text" 
+              id="mobileSearchInput"
+
+            oninput="handleSearch(this.value)"
+                          placeholder="Cari MacBook, ROG, ThinkPad, i7, M3..." 
+              class="search-entry search-entry-mobile w-full bg-obsidian-900 border border-white/10 focus:border-champagne-500/70 rounded-xl pl-10 pr-9 py-2 text-sm text-platinum-100 placeholder-platinum-500 outline-none"
+          />
+          <button id="clearSearchMobile" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-platinum-400">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="top" class="relative hero-glow border-b border-white/10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-champagne-500/10 border border-champagne-500/30 text-champagne-300 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-champagne-500 animate-pulse"></span>
+            <span>Unit Terkurasi &bull; Lolos 42-Point Hardware QC &bull; Garansi Resmi & Toko</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-white leading-[1.12]">
+            <span class="hero-title-white-shimmer">Performa Flagship dalam</span> <span class="hero-title-gold-shimmer">Estetika Presisi.</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-platinum-400 max-w-2xl leading-relaxed">
+            Koleksi pilihan laptop ultrabook eksekutif, workstation kreator, hingga mesin gaming kelas atas—tersedia unit <strong class="text-platinum-200 font-semibold">Baru Segel Resmi</strong> dan <strong class="text-platinum-200 font-semibold">Second Terkurasi Grade A+</strong> siap kirim dengan packing kayu berasuransi.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#katalog" class="btn-gold-gradient px-6 py-3.5 rounded-xl font-bold text-sm inline-flex items-center gap-2">
+              <span>Jelajahi Katalog</span>
+              <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#bantu-pilih" class="px-5 py-3.5 rounded-xl bg-obsidian-850 hover:bg-obsidian-800 border border-white/15 text-sm font-semibold text-white inline-flex items-center gap-2 transition">
+              <i data-lucide="sparkles" class="w-4 h-4 text-champagne-400"></i>
+              <span>Bantu Pilih Laptop</span>
+            </a>
+            <a href="#cek-garansi" class="px-4 py-3.5 rounded-xl text-sm font-medium text-platinum-400 hover:text-champagne-300 inline-flex items-center gap-1.5 transition">
+              <i data-lucide="badge-check" class="w-4 h-4"></i>
+              <span>Cek Garansi</span>
+            </a>
+          </div>
+
+          <!-- Trust Metrics -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10 max-w-lg">
+            <div>
+              <p class="font-mono text-lg sm:text-xl font-bold text-white">100%</p>
+              <p class="text-xs text-platinum-400">Original & Lolos QC</p>
+            </div>
+            <div>
+              <p class="font-mono text-lg sm:text-xl font-bold text-champagne-400">0% Cicilan</p>
+              <p class="text-xs text-platinum-400">Tenor Fleksibel 24 Bln</p>
+            </div>
+            <div>
+              <p class="font-mono text-lg sm:text-xl font-bold text-white">Trade-In</p>
+              <p class="text-xs text-platinum-400">Tukar Tambah Instan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="showcase-orbit relative rounded-2xl p-[1px] bg-gradient-to-b from-champagne-500/40 via-white/10 to-transparent shadow-card-elevated">
+            <div class="relative z-[1] bg-obsidian-900 rounded-2xl p-5 sm:p-6 space-y-5">
+              <div class="relative rounded-xl overflow-hidden aspect-[16/10] bg-obsidian-950 border border-white/10">
+                <img 
+                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1000&q=85" 
+                  alt="Flagship Laptop Showcase"
+                  onerror="this.onerror=null;this.src=getFallbackHardwareSVG('FLAGSHIP EDITION');"
+                  class="w-full h-full object-cover object-center opacity-90 hover:scale-105 transition duration-700"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-obsidian-950/80 backdrop-blur border border-champagne-500/40 text-[11px] font-mono text-champagne-300">
+                  FEATURED WORKSTATION
+                </div>
+                <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+                  <div>
+                    <p class="text-xs text-platinum-400">Apple Silicon M3 Pro</p>
+                    <h3 class="text-base sm:text-lg font-bold text-white">MacBook Pro 14" Space Black</h3>
+                  </div>
+                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Ready Stock</span>
+                </div>
+              </div>
+
+              <!-- Quick Tools Shortcut Grid -->
+              <div class="grid grid-cols-2 gap-3">
+                <a href="#simulasi-tools" onclick="switchToolTab('installment')" class="p-3.5 rounded-xl bg-obsidian-950/80 hover:bg-obsidian-850 border border-white/10 hover:border-champagne-500/40 transition group">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <i data-lucide="calculator" class="w-4 h-4 text-champagne-400"></i>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-platinum-500 group-hover:text-champagne-400 transition"></i>
+                  </div>
+                  <p class="text-xs font-bold text-white">Simulasi Cicilan</p>
+                  <p class="text-[11px] text-platinum-400">Hitung angsuran bulanan</p>
+                </a>
+
+                <a href="#simulasi-tools" onclick="switchToolTab('tradein')" class="p-3.5 rounded-xl bg-obsidian-950/80 hover:bg-obsidian-850 border border-white/10 hover:border-champagne-500/40 transition group">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <i data-lucide="refresh-cw" class="w-4 h-4 text-champagne-400"></i>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-platinum-500 group-hover:text-champagne-400 transition"></i>
+                  </div>
+                  <p class="text-xs font-bold text-white">Taksiran Trade-In</p>
+                  <p class="text-[11px] text-platinum-400">Estimasi nilai laptop lama</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. REKOMENDASI CERDAS ("BANTU PILIH LAPTOP") ==================== -->
+  <section id="bantu-pilih" class="py-10 sm:py-14 border-b border-white/10 bg-obsidian-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-2xl border border-champagne-500/25 p-5 sm:p-8 shadow-card-elevated">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-white/10">
+          <div>
+            <div class="inline-flex items-center gap-2 text-champagne-400 text-xs font-mono uppercase tracking-wider mb-1">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Smart Hardware Advisor</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Bantu Pilih Laptop Paling Sesuai</h2>
+            <p class="text-xs sm:text-sm text-platinum-400 mt-1">Pilih aktivitas utama dan rentang anggaran Anda—sistem otomatis menyaring & menyorot unit terbaik.</p>
+          </div>
+          <button 
+            id="resetAdvisorBtn"
+            onclick="resetAdvisor()"
+            class="hidden self-start lg:self-center px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-platinum-200 items-center gap-1.5 transition"
+          >
+            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+            <span>Reset Rekomendasi</span>
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-6 pt-6 items-end">
+          <!-- Step 1: Kebutuhan -->
+          <div class="md:col-span-6 space-y-2.5">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-platinum-300">1. Kebutuhan Utama Anda</label>
+            <div class="grid grid-cols-2 gap-2.5" id="advisorNeedOptions">
+              <button type="button" data-need="Kuliah/Tugas/Ngetik" onclick="selectAdvisorNeed(this)" class="advisor-need-btn text-left p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 transition">
+                <div class="flex items-center gap-2 text-xs font-bold text-white">
+                  <i data-lucide="book-open" class="w-4 h-4 text-champagne-400 shrink-0"></i>
+                  <span>Kuliah & Office</span>
+                </div>
+                <p class="text-[11px] text-platinum-400 mt-1">Ringan, baterai awet, hemat</p>
+              </button>
+
+              <button type="button" data-need="Desain/Video/Coding" onclick="selectAdvisorNeed(this)" class="advisor-need-btn text-left p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 transition">
+                <div class="flex items-center gap-2 text-xs font-bold text-white">
+                  <i data-lucide="layers" class="w-4 h-4 text-champagne-400 shrink-0"></i>
+                  <span>Desain, Video & Code</span>
+                </div>
+                <p class="text-[11px] text-platinum-400 mt-1">Layar akurat, RAM kencang</p>
+              </button>
+
+              <button type="button" data-need="Gaming Berat" onclick="selectAdvisorNeed(this)" class="advisor-need-btn text-left p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 transition">
+                <div class="flex items-center gap-2 text-xs font-bold text-white">
+                  <i data-lucide="gamepad-2" class="w-4 h-4 text-champagne-400 shrink-0"></i>
+                  <span>Gaming & 3D Render</span>
+                </div>
+                <p class="text-[11px] text-platinum-400 mt-1">GPU RTX dedicated, refresh tinggi</p>
+              </button>
+
+              <button type="button" data-need="Bisnis/Portabilitas" onclick="selectAdvisorNeed(this)" class="advisor-need-btn text-left p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 transition">
+                <div class="flex items-center gap-2 text-xs font-bold text-white">
+                  <i data-lucide="briefcase" class="w-4 h-4 text-champagne-400 shrink-0"></i>
+                  <span>Bisnis & Eksekutif</span>
+                </div>
+                <p class="text-[11px] text-platinum-400 mt-1">Build premium, ultrathin, elite</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Anggaran -->
+          <div class="md:col-span-4 space-y-2.5">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-platinum-300">2. Rentang Anggaran</label>
+            <div class="grid grid-cols-2 gap-2.5" id="advisorBudgetOptions">
+              <button type="button" data-budget="under7" onclick="selectAdvisorBudget(this)" class="advisor-budget-btn p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 text-left transition">
+                <span class="block font-mono text-xs font-bold text-white">&lt; Rp 7 Juta</span>
+                <span class="text-[11px] text-platinum-400">Value & Pelajar</span>
+              </button>
+
+              <button type="button" data-budget="7to12" onclick="selectAdvisorBudget(this)" class="advisor-budget-btn p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 text-left transition">
+                <span class="block font-mono text-xs font-bold text-white">Rp 7 - 12 Juta</span>
+                <span class="text-[11px] text-platinum-400">Sweet Spot Harian</span>
+              </button>
+
+              <button type="button" data-budget="12to20" onclick="selectAdvisorBudget(this)" class="advisor-budget-btn p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 text-left transition">
+                <span class="block font-mono text-xs font-bold text-white">Rp 12 - 20 Juta</span>
+                <span class="text-[11px] text-platinum-400">Pro & Gaming</span>
+              </button>
+
+              <button type="button" data-budget="above20" onclick="selectAdvisorBudget(this)" class="advisor-budget-btn p-3 rounded-xl bg-obsidian-950/90 border border-white/10 hover:border-champagne-500/50 text-left transition">
+                <span class="block font-mono text-xs font-bold text-white">&gt; Rp 20 Juta</span>
+                <span class="text-[11px] text-platinum-400">Flagship Tanpa Kompromi</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <div class="md:col-span-2">
+            <button 
+              type="button"
+              onclick="applySmartRecommendation()"
+              class="w-full btn-gold-gradient py-4 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg"
+            >
+              <i data-lucide="wand-2" class="w-4 h-4"></i>
+              <span>Tampilkan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Recommendation Result Banner -->
+        <div id="advisorResultBanner" class="hidden mt-6 p-4 rounded-xl bg-champagne-500/10 border border-champagne-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-start gap-3">
+            <div class="p-2 rounded-lg bg-champagne-500/20 text-champagne-400 shrink-0 mt-0.5">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p id="advisorResultTitle" class="text-sm font-bold text-champagne-300">Rekomendasi Terbaik Ditemukan</p>
+              <p id="advisorResultDesc" class="text-xs text-platinum-200 mt-0.5 leading-relaxed"></p>
+            </div>
+          </div>
+          <a href="#katalog" class="shrink-0 text-xs font-bold text-champagne-400 hover:text-champagne-300 underline underline-offset-4">Lihat Sorotan &darr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. KATALOG LAPTOP INTERAKTIF & PERBANDINGAN ==================== -->
+  <section id="katalog" class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header & Sort -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.2em] text-champagne-400">Curated Collection</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Katalog Laptop & Workstation</h2>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <span id="catalogCountLabel" class="text-xs font-mono text-platinum-400">Menampilkan 8 unit</span>
+          <select 
+            id="sortSelect" 
+            onchange="renderCatalog()"
+            class="bg-obsidian-900 border border-white/10 rounded-xl px-3.5 py-2 text-xs font-medium text-platinum-200 focus:border-champagne-500 outline-none"
+          >
+            <option value="featured">Urutkan: Unggulan</option>
+            <option value="price-asc">Harga: Terendah ke Tertinggi</option>
+            <option value="price-desc">Harga: Tertinggi ke Terendah</option>
+            <option value="condition-new">Kondisi: Baru Resmi Dulu</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Quick Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-6" id="categoryFilterBar">
+        <button onclick="setCategoryFilter('Semua')" data-cat="Semua" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold border transition bg-champagne-500 text-obsidian-950 border-champagne-500">
+          Semua Unit
+        </button>
+        <button onclick="setCategoryFilter('Ultrabook & Kerja')" data-cat="Ultrabook & Kerja" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-obsidian-900 text-platinum-300 hover:border-champagne-500/40 transition">
+          Ultrabook & Kerja
+        </button>
+        <button onclick="setCategoryFilter('Gaming & Kreator')" data-cat="Gaming & Kreator" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-obsidian-900 text-platinum-300 hover:border-champagne-500/40 transition">
+          Gaming & Kreator
+        </button>
+        <button onclick="setCategoryFilter('Laptop Pelajar/Hemat')" data-cat="Laptop Pelajar/Hemat" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-obsidian-900 text-platinum-300 hover:border-champagne-500/40 transition">
+          Laptop Pelajar / Hemat
+        </button>
+        <button onclick="setCategoryFilter('Second/Refurbished Bergaransi')" data-cat="Second/Refurbished Bergaransi" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-obsidian-900 text-platinum-300 hover:border-champagne-500/40 transition">
+          Second / Refurbished Bergaransi
+        </button>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyCatalogState" class="hidden text-center py-16 px-4 rounded-2xl bg-obsidian-900/60 border border-white/10">
+        <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mx-auto mb-4 text-champagne-400">
+          <i data-lucide="search-x" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Unit Tidak Ditemukan</h3>
+        <p class="text-sm text-platinum-400 max-w-md mx-auto mt-1">Coba ubah kata kunci pencarian, kategori, atau reset filter rekomendasi untuk melihat seluruh koleksi.</p>
+        <button onclick="resetAllFilters()" class="mt-5 px-5 py-2.5 rounded-xl btn-gold-gradient text-xs font-bold">
+          Tampilkan Semua Laptop
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 4. SIMULASI CICILAN & TUKAR TAMBAH ==================== -->
+  <section id="simulasi-tools" class="py-12 sm:py-16 border-t border-white/10 bg-obsidian-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-mono uppercase tracking-[0.2em] text-champagne-400">Flexible Financing & Upgrade</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Simulasi Cicilan & Taksiran Trade-In</h2>
+        <p class="text-xs sm:text-sm text-platinum-400 mt-2">Rencanakan pembayaran bulanan secara transparan atau tukar tambah laptop lama Anda dengan potongan harga langsung.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        
+        <!-- LEFT: Kalkulator Simulasi Cicilan -->
+        <div class="glass-card rounded-2xl border border-white/10 p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+              <div class="w-10 h-10 rounded-xl bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center text-champagne-400">
+                <i data-lucide="credit-card" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Kalkulator Simulasi Cicilan</h3>
+                <p class="text-xs text-platinum-400">Pilih unit dari katalog atau masukkan harga custom</p>
+              </div>
+            </div>
+
+            <!-- Select Laptop or Custom Price -->
+            <div class="space-y-2">
+              <label class="block text-xs font-semibold text-platinum-300">Pilih Unit Laptop</label>
+              <select id="installmentLaptopSelect" onchange="syncInstallmentPriceFromSelect()" class="w-full bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-xs font-semibold text-platinum-300">Harga Laptop (Rp)</label>
+              <input 
+                type="number" 
+                id="installmentPriceInput" 
+                value="18500000" 
+                min="1000000" 
+                step="100000"
+                oninput="calculateInstallment()"
+                class="w-full font-mono bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none"
+              />
+            </div>
+
+            <!-- DP & Tenor Grid -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="block text-xs font-semibold text-platinum-300">Uang Muka (DP)</label>
+                <select id="installmentDPSelect" onchange="calculateInstallment()" class="w-full bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+                  <option value="0">0% (Tanpa DP)</option>
+                  <option value="10">10% DP</option>
+                  <option value="20" selected>20% DP</option>
+                  <option value="30">30% DP</option>
+                </select>
+              </div>
+
+              <div class="space-y-2">
+                <label class="block text-xs font-semibold text-platinum-300">Tenor Cicilan</label>
+                <select id="installmentTenorSelect" onchange="calculateInstallment()" class="w-full bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+                  <option value="3">3 Bulan (Bunga 0%)</option>
+                  <option value="6">6 Bulan (Bunga 0.8%/bln)</option>
+                  <option value="12" selected>12 Bulan (Bunga 1.1%/bln)</option>
+                  <option value="24">24 Bulan (Bunga 1.25%/bln)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calculation Output -->
+          <div class="mt-6 p-4 rounded-xl bg-obsidian-950 border border-champagne-500/30 space-y-3">
+            <div class="flex justify-between text-xs text-platinum-400">
+              <span>Nominal DP (<span id="dpPercentLabel">20%</span>):</span>
+              <span id="dpAmountDisplay" class="font-mono text-platinum-200 font-semibold">Rp 3.700.000</span>
+            </div>
+            <div class="flex justify-between text-xs text-platinum-400">
+              <span>Pokok Pembiayaan:</span>
+              <span id="principalDisplay" class="font-mono text-platinum-200 font-semibold">Rp 14.800.000</span>
+            </div>
+            <div class="pt-2.5 border-t border-white/10 flex items-baseline justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-champagne-400">Estimasi Cicilan / Bulan</span>
+              <span id="monthlyInstallmentDisplay" class="font-mono text-xl sm:text-2xl font-extrabold text-white">Rp 1.396.133</span>
+            </div>
+            <p class="text-[11px] text-platinum-500 leading-relaxed">
+              *Catatan Simulasi: Angka di atas adalah estimasi cicilan kartu kredit / mitra multifinansial (Kredivo, Indodana, Home Credit). Tenor 3 bulan tersedia 0% untuk kartu kredit bank partner.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Kalkulator Taksiran Trade-In -->
+        <div class="glass-card rounded-2xl border border-white/10 p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+              <div class="w-10 h-10 rounded-xl bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center text-champagne-400">
+                <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Taksiran Awal Trade-In</h3>
+                <p class="text-xs text-platinum-400">Cek kisaran potongan harga dari laptop lama Anda</p>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-3.5">
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-platinum-300">Merek & Seri Laptop Lama</label>
+                <input 
+                  type="text" 
+                  id="tradeInModel" 
+                  placeholder="Contoh: MacBook Air M1 2020"
+                  oninput="calculateTradeIn()"
+                  class="w-full bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-platinum-500 outline-none"
+                />
+              </div>
+
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-platinum-300">Tahun Rilis</label>
+                <select id="tradeInYear" onchange="calculateTradeIn()" class="w-full bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+                  <option value="2024">2024 - 2025</option>
+                  <option value="2022" selected>2022 - 2023</option>
+                  <option value="2020">2020 - 2021</option>
+                  <option value="2018">2018 - 2019</option>
+                  <option value="2017">2017 ke bawah</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-3.5">
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-platinum-300">Kelas Prosesor / Seri</label>
+                <select id="tradeInTier" onchange="calculateTradeIn()" class="w-full bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+                  <option value="flagship">Apple M-Series / i9 / Ryzen 9</option>
+                  <option value="midhigh" selected>Intel Core i7 / Ryzen 7</option>
+                  <option value="mid">Intel Core i5 / Ryzen 5</option>
+                  <option value="entry">Core i3 / Ryzen 3 / Celeron</option>
+                </select>
+              </div>
+
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-platinum-300">Kondisi Fisik & Baterai</label>
+                <select id="tradeInCondition" onchange="calculateTradeIn()" class="w-full bg-obsidian-950 border border-white/10 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+                  <option value="likenew">Mulus Like New (95-99%, Fullset)</option>
+                  <option value="normal" selected>Normal Pemakaian (Lecet halus)</option>
+                  <option value="minor">Minus Ringan (Baterai drop / dent kecil)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trade-In Estimate Result -->
+          <div class="mt-6 p-4 rounded-xl bg-obsidian-950 border border-white/10 space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-champagne-400">Estimasi Nilai Tukar Tambah</span>
+                <p id="tradeInRangeDisplay" class="font-mono text-lg sm:text-xl font-extrabold text-white mt-0.5">Rp 6.200.000 — Rp 7.400.000</p>
+              </div>
+              <button 
+                type="button"
+                onclick="sendTradeInToWA()"
+                class="px-4 py-2.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-300 text-xs font-bold inline-flex items-center justify-center gap-2 transition shrink-0"
+              >
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                <span>Ajukan ke WA</span>
+              </button>
+            </div>
+            <p class="text-[11px] text-platinum-500 leading-relaxed">
+              *Taksiran awal bersifat indikatif. Nilai final ditentukan setelah inspeksi fisik & fungsi (layar, keyboard, baterai, port) di toko atau via video call tim teknisi kami.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. CEK GARANSI / STATUS PESANAN & FAQ ==================== -->
+  <section id="cek-garansi" class="py-12 sm:py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- LEFT (5 Cols): Cek Status Pesanan & Garansi -->
+        <div class="lg:col-span-5 glass-card rounded-2xl border border-champagne-500/25 p-6 sm:p-7 space-y-5">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-wider text-champagne-400">After-Sales Verification</span>
+            <h3 class="text-xl font-bold text-white mt-1">Cek Status Pesanan & Garansi</h3>
+            <p class="text-xs text-platinum-400 mt-1">Masukkan kode transaksi Anda untuk memverifikasi keaslian garansi & progres pengiriman.</p>
+          </div>
+
+          <div class="flex gap-2">
+            <input 
+              type="text" 
+              id="warrantyCodeInput" 
+              placeholder="Contoh: VLD-2026-881"
+              onkeydown="if(event.key==='Enter') checkWarrantyStatus()"
+              class="flex-1 font-mono uppercase bg-obsidian-950 border border-white/15 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-platinum-500 outline-none"
+            />
+            <button 
+              type="button"
+              onclick="checkWarrantyStatus()"
+              class="btn-gold-gradient px-4 py-2.5 rounded-xl font-bold text-xs shrink-0"
+            >
+              Lacak
+            </button>
+          </div>
+
+          <!-- Sample Clickable Codes -->
+          <div class="flex flex-wrap items-center gap-2 text-[11px] text-platinum-400">
+            <span>Kode contoh:</span>
+            <button type="button" onclick="fillAndCheckCode('VLD-2026-881')" class="font-mono px-2 py-0.5 rounded bg-white/5 hover:bg-champagne-500/20 text-champagne-300 border border-white/10 transition">VLD-2026-881</button>
+            <button type="button" onclick="fillAndCheckCode('VLD-2026-904')" class="font-mono px-2 py-0.5 rounded bg-white/5 hover:bg-champagne-500/20 text-champagne-300 border border-white/10 transition">VLD-2026-904</button>
+          </div>
+
+          <!-- Warranty Result Card -->
+          <div id="warrantyResultBox" class="hidden p-4 rounded-xl bg-obsidian-950 border border-white/10 space-y-2.5">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- RIGHT (7 Cols): FAQ Accordion -->
+        <div class="lg:col-span-7 space-y-4">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-wider text-champagne-400">Buyer Assurance</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Pertanyaan yang Sering Diajukan (FAQ)</h3>
+          </div>
+
+          <div class="space-y-3" id="faqContainer">
+            <!-- FAQ 1 -->
+            <div class="rounded-xl bg-obsidian-900 border border-white/10 overflow-hidden">
+              <button type="button" onclick="toggleFaq(0)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/[0.02] transition">
+                <span class="text-sm font-bold text-white">Bagaimana perbedaan garansi unit "Baru Resmi" dan "Second Terkurasi"?</span>
+                <i data-lucide="chevron-down" id="faqIcon0" class="w-4 h-4 text-champagne-400 shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="faqContent0" class="px-5 pb-4 text-xs sm:text-sm text-platinum-400 leading-relaxed border-t border-white/5 pt-3">
+                Unit <strong class="text-platinum-200">Baru Resmi</strong> berstatus BNIB (Brand New In Box) tersegel pabrik dengan garansi resmi brand Indonesia (Apple iBox/Digimap, ASUS, Lenovo, Dell) 1 hingga 2 tahun. Sementara unit <strong class="text-platinum-200">Second Terkurasi</strong> adalah unit pilihan Grade A+ (kemulusan 95–99%, baterai sehat &gt;88%, bebas servis mesin) yang dilindungi <strong class="text-champagne-300">Garansi Toko Penuh 30 Hari Tukar Unit + 1 Tahun Bantuan Servis</strong>.
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="rounded-xl bg-obsidian-900 border border-white/10 overflow-hidden">
+              <button type="button" onclick="toggleFaq(1)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/[0.02] transition">
+                <span class="text-sm font-bold text-white">Apakah bisa meminta video cek kondisi fisik & kesehatan baterai sebelum bayar?</span>
+                <i data-lucide="chevron-down" id="faqIcon1" class="w-4 h-4 text-champagne-400 shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="faqContent1" class="hidden px-5 pb-4 text-xs sm:text-sm text-platinum-400 leading-relaxed border-t border-white/5 pt-3">
+                Tentu saja! Sebelum pelunasan atau pengiriman, tim teknisi kami akan mengirimkan video detail 4K melalui WhatsApp yang memperlihatkan nomor seri (Serial Number), kondisi bodi/layar, Battery Health / Cycle Count, serta hasil stress-test suhu dan port I/O secara real-time.
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="rounded-xl bg-obsidian-900 border border-white/10 overflow-hidden">
+              <button type="button" onclick="toggleFaq(2)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/[0.02] transition">
+                <span class="text-sm font-bold text-white">Bagaimana standar keamanan pengiriman untuk pembeli luar kota?</span>
+                <i data-lucide="chevron-down" id="faqIcon2" class="w-4 h-4 text-champagne-400 shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="faqContent2" class="hidden px-5 pb-4 text-xs sm:text-sm text-platinum-400 leading-relaxed border-t border-white/5 pt-3">
+                Setiap pengiriman luar kota wajib menggunakan <strong class="text-platinum-200">Bubble Wrap berlapis + Box Pelindung + Packing Kayu Resmi</strong> serta <strong class="text-champagne-300">Asuransi Penuh senilai harga barang</strong> via JNE YES / J&amp;T / Paxel. Apabila terjadi kerusakan selama ekspedisi, dana atau unit diganti 100%.
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="rounded-xl bg-obsidian-900 border border-white/10 overflow-hidden">
+              <button type="button" onclick="toggleFaq(3)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/[0.02] transition">
+                <span class="text-sm font-bold text-white">Apakah bisa request instalasi aplikasi kerja atau upgrade RAM/SSD?</span>
+                <i data-lucide="chevron-down" id="faqIcon3" class="w-4 h-4 text-champagne-400 shrink-0 transition-transform duration-200"></i>
+              </button>
+              <div id="faqContent3" class="hidden px-5 pb-4 text-xs sm:text-sm text-platinum-400 leading-relaxed border-t border-white/5 pt-3">
+                Bisa. Anda dapat memilih opsi upgrade RAM/SSD langsung di menu <strong class="text-platinum-200">Detail &amp; Upgrade</strong> pada kartu produk, serta mencentang permintaan instalasi OS/aplikasi standar produktivitas secara gratis di keranjang sebelum mengirim pesanan ke WhatsApp.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/10 bg-obsidian-950 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center text-champagne-400">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <p id="footerStoreName" class="text-sm font-bold text-white">Rizky Tech</p>
+          <p id="footerStoreAddress" class="text-xs text-platinum-400">SCBD District 8, Gallery Level 2, Jakarta Selatan</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs text-platinum-400">
+        <span>&copy; 2026 <span id="footerCopyrightName">Rizky Tech</span>. All rights reserved.</span>
+        <button onclick="openAdminAccess()" class="text-platinum-500 hover:text-champagne-400 transition">Admin Panel</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING COMPARE BAR ==================== -->
+  <div id="compareFloatingBar" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-30 w-[94%] max-w-2xl glass-card border border-champagne-500/50 rounded-2xl p-3.5 shadow-card-elevated transition-all">
+    <div class="flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-9 h-9 rounded-xl bg-champagne-500 text-obsidian-950 font-mono font-extrabold text-sm flex items-center justify-center shrink-0" id="compareCountBadge">0</div>
+        <div class="min-w-0">
+          <p class="text-xs font-bold text-white truncate">Bandingkan Spesifikasi Laptop</p>
+          <p id="compareSelectedNames" class="text-[11px] text-platinum-400 truncate">Pilih 2 hingga 3 laptop untuk perbandingan</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <button onclick="clearCompareList()" class="px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-platinum-300 font-medium transition">Reset</button>
+        <button onclick="openCompareModal()" id="openCompareModalBtn" class="btn-gold-gradient px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5">
+          <i data-lucide="columns" class="w-3.5 h-3.5"></i>
+          <span>Bandingkan</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 1: QUICK VIEW / DETAIL & UPGRADE CONFIGURATOR ==================== -->
+  <div id="detailModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm">
+    <div class="bg-obsidian-900 border border-white/15 rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-card-elevated">
+      <div id="detailModalBody">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: COMPARE LAPTOPS MODAL ==================== -->
+  <div id="compareModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm">
+    <div class="bg-obsidian-900 border border-champagne-500/30 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-card-elevated">
+      <div class="sticky top-0 z-10 bg-obsidian-900/95 backdrop-blur px-6 py-4 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="columns" class="w-5 h-5 text-champagne-400"></i>
+          <h3 class="text-lg font-bold text-white">Perbandingan Spesifikasi Berdampingan</h3>
+        </div>
+        <button onclick="closeCompareModal()" class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-platinum-300">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="compareModalBody" class="p-4 sm:p-6 overflow-x-auto">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 5. SLIDE-OVER CART DRAWER & WHATSAPP CHECKOUT ==================== -->
+  <div id="cartDrawerBackdrop" onclick="toggleCartDrawer(false)" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-xs transition-opacity"></div>
+  <aside id="cartDrawer" class="fixed top-0 right-0 z-50 h-full w-full max-w-md bg-obsidian-900 border-l border-white/15 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    
+    <!-- Drawer Header -->
+    <div class="px-5 py-4 border-b border-white/10 flex items-center justify-between bg-obsidian-950/60">
+      <div class="flex items-center gap-2.5">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-champagne-400"></i>
+        <div>
+          <h3 class="text-base font-bold text-white">Keranjang & Checkout</h3>
+          <p class="text-[11px] text-platinum-400">Otomatis terformat ke WhatsApp Admin</p>
+        </div>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-platinum-300">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Scrollable Content -->
+    <div class="flex-1 overflow-y-auto p-5 space-y-6">
+      
+      <!-- Cart Items List -->
+      <div id="cartItemsContainer" class="space-y-3">
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Technical Request Presets -->
+      <div id="cartCheckoutSection" class="space-y-5">
+        <div class="p-4 rounded-xl bg-obsidian-950/80 border border-white/10 space-y-2.5">
+          <p class="text-xs font-bold uppercase tracking-wider text-champagne-400">Request Teknis Gratis (Opsional)</p>
+          <label class="flex items-start gap-2.5 text-xs text-platinum-200 cursor-pointer">
+            <input type="checkbox" id="reqInstallOS" checked class="mt-0.5 rounded border-white/20 bg-obsidian-900 text-champagne-500 focus:ring-champagne-500">
+            <span>Install ulang Windows/macOS bersih + Aplikasi Office siap pakai</span>
+          </label>
+          <label class="flex items-start gap-2.5 text-xs text-platinum-200 cursor-pointer">
+            <input type="checkbox" id="reqVideoQC" checked class="mt-0.5 rounded border-white/20 bg-obsidian-900 text-champagne-500 focus:ring-champagne-500">
+            <span>Kirim video cek fisik, layar & kesehatan baterai sebelum kirim</span>
+          </label>
+        </div>
+
+        <!-- Quick Checkout Form -->
+        <div class="space-y-3.5 pt-2 border-t border-white/10">
+          <p class="text-xs font-bold uppercase tracking-wider text-white">Data Pemesan & Pengiriman</p>
+
+          <div>
+            <label class="block text-xs text-platinum-300 mb-1">Nama Lengkap *</label>
+            <input type="text" id="checkoutName" placeholder="Nama lengkap Anda" class="w-full bg-obsidian-950 border border-white/15 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+          </div>
+
+          <div>
+            <label class="block text-xs text-platinum-300 mb-1">Nomor WhatsApp Aktif *</label>
+            <input type="tel" id="checkoutPhone" placeholder="Contoh: 081234567890" class="w-full font-mono bg-obsidian-950 border border-white/15 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+          </div>
+
+          <div>
+            <label class="block text-xs text-platinum-300 mb-1">Metode Pengambilan / Pengiriman</label>
+            <select id="checkoutShipping" class="w-full bg-obsidian-950 border border-white/15 focus:border-champagne-500 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none">
+              <option value="Ambil Langsung di Toko (Cek Unit Sepuasnya)">Ambil Langsung di Toko (Cek Unit Sepuasnya)</option>
+              <option value="COD / Kurir Instant Lokal (Area Kota)">COD / Kurir Instant Lokal (Area Kota)</option>
+              <option value="Ekspedisi Asuransi + Packing Kayu Resmi">Ekspedisi Asuransi + Packing Kayu Resmi</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs text-platinum-300 mb-1">Alamat / Catatan Tambahan</label>
+            <textarea id="checkoutNotes" rows="2" placeholder="Alamat pengiriman atau catatan khusus untuk admin..." class="w-full bg-obsidian-950 border border-white/15 focus:border-champagne-500 rounded-xl px-3.5 py-2 text-sm text-white outline-none"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer Footer -->
+    <div id="cartFooter" class="p-5 border-t border-white/10 bg-obsidian-950 space-y-3">
+      <div class="flex items-center justify-between">
+        <span class="text-xs text-platinum-400">Estimasi Total Pembayaran</span>
+        <span id="cartSubtotalDisplay" class="font-mono text-lg font-extrabold text-champagne-400">Rp 0</span>
+      </div>
+      <button 
+        type="button"
+        onclick="processWhatsAppCheckout()"
+        class="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-obsidian-950 font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition cursor-pointer"
+      >
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Pesan Sekarang via WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== 7. ADMIN PANEL MODAL (#admin) ==================== -->
+  <div id="adminModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md">
+    <div class="bg-obsidian-900 border border-champagne-500/40 rounded-2xl max-w-5xl w-full max-h-[92vh] overflow-y-auto shadow-card-elevated">
+      
+      <!-- Admin Header -->
+      <div class="sticky top-0 z-10 bg-obsidian-950/95 backdrop-blur px-6 py-4 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="p-2 rounded-lg bg-champagne-500/20 text-champagne-400">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-white">VELDOR ADMIN — Manajemen Katalog & Toko</h3>
+            <p class="text-[11px] text-platinum-400">Semua perubahan tersimpan otomatis di browser (LocalStorage)</p>
+          </div>
+        </div>
+        <button onclick="closeAdminModal()" class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-platinum-300">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- STEP A: PIN Login Screen -->
+      <div id="adminPinScreen" class="p-8 max-w-md mx-auto text-center space-y-5">
+        <div class="w-14 h-14 rounded-2xl bg-champagne-500/15 border border-champagne-500/30 flex items-center justify-center mx-auto text-champagne-400">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white">Autentikasi Pengelola Toko</h4>
+          <p class="text-xs text-platinum-400 mt-1">Masukkan PIN Admin untuk mengelola produk, harga, dan nomor WhatsApp tujuan checkout.</p>
+          <p class="text-[11px] font-mono text-champagne-400 mt-2 bg-champagne-500/10 py-1 px-3 rounded-lg inline-block">Petunjuk PIN Default: 1234</p>
+        </div>
+        <div class="space-y-3">
+          <input 
+            type="password" 
+            id="adminPinInput" 
+            maxlength="6"
+            placeholder="••••"
+            onkeydown="if(event.key==='Enter') verifyAdminPin()"
+            class="w-full text-center font-mono text-xl tracking-[0.5em] bg-obsidian-950 border border-white/15 focus:border-champagne-500 rounded-xl px-4 py-3 text-white outline-none"
+          />
+          <button onclick="verifyAdminPin()" class="w-full btn-gold-gradient py-3 rounded-xl font-bold text-sm">
+            Masuk Dashboard Admin
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP B: Admin Dashboard Content -->
+      <div id="adminDashboardContent" class="hidden p-5 sm:p-6 space-y-8">
+        
+        <!-- Store Settings Card -->
+        <div class="p-5 rounded-2xl bg-obsidian-950 border border-white/10 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-bold uppercase tracking-wider text-champagne-400 flex items-center gap-2">
+              <i data-lucide="store" class="w-4 h-4"></i>
+              <span>Pengaturan Identitas Toko & WhatsApp</span>
+            </h4>
+            <button onclick="saveStoreSettings()" class="btn-gold-gradient px-4 py-2 rounded-xl text-xs font-bold">
+              Simpan Pengaturan
+            </button>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Nama Toko</label>
+              <input type="text" id="adminStoreNameInput" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Tagline Header</label>
+              <input type="text" id="adminStoreTaglineInput" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Nomor WA Admin (Format 628xxx)</label>
+              <input type="text" id="adminStoreWAInput" placeholder="6281298887766" class="w-full font-mono bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Alamat Showroom / Toko</label>
+              <input type="text" id="adminStoreAddressInput" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+          </div>
+        </div>
+
+        <!-- Add / Edit Product Form -->
+        <div class="p-5 rounded-2xl bg-obsidian-950 border border-white/10 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 id="adminFormTitle" class="text-sm font-bold uppercase tracking-wider text-champagne-400 flex items-center gap-2">
+              <i data-lucide="plus-circle" class="w-4 h-4"></i>
+              <span>Tambah Unit Laptop Baru</span>
+            </h4>
+            <button type="button" id="cancelEditProductBtn" onclick="resetAdminProductForm()" class="hidden text-xs text-platinum-400 hover:text-white underline">
+              Batal Edit
+            </button>
+          </div>
+
+          <form id="adminProductForm" onsubmit="handleAdminProductSubmit(event)" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            <input type="hidden" id="editProductId" value="">
+            
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Nama Seri Laptop *</label>
+              <input type="text" id="prodName" required placeholder="Contoh: MacBook Air 15 M3" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Kategori *</label>
+              <select id="prodCategory" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+                <option value="Ultrabook & Kerja">Ultrabook & Kerja</option>
+                <option value="Gaming & Kreator">Gaming & Kreator</option>
+                <option value="Laptop Pelajar/Hemat">Laptop Pelajar/Hemat</option>
+                <option value="Second/Refurbished Bergaransi">Second/Refurbished Bergaransi</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Kondisi Unit *</label>
+              <select id="prodCondition" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+                <option value="Baru Resmi">Baru Resmi</option>
+                <option value="Second Terkurasi">Second Terkurasi</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Prosesor (CPU) *</label>
+              <input type="text" id="prodCpu" required placeholder="Apple M3 8-Core / Intel Core Ultra 7" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">GPU / Grafis *</label>
+              <input type="text" id="prodGpu" required placeholder="10-Core GPU / RTX 4060 8GB" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">RAM & SSD *</label>
+              <div class="grid grid-cols-2 gap-2">
+                <input type="text" id="prodRam" required placeholder="16GB LPDDR5" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+                <input type="text" id="prodStorage" required placeholder="512GB NVMe" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Layar & Berat/Baterai *</label>
+              <div class="grid grid-cols-2 gap-2">
+                <input type="text" id="prodDisplay" required placeholder="15.3&quot; Liquid Retina" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+                <input type="text" id="prodBatteryWeight" required placeholder="1.51 kg / 18 Jam" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Harga Normal & Harga Promo (Rp) *</label>
+              <div class="grid grid-cols-2 gap-2">
+                <input type="number" id="prodNormalPrice" required placeholder="24999000" class="w-full font-mono bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+                <input type="number" id="prodPromoPrice" required placeholder="22499000" class="w-full font-mono bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Stok & Info Garansi *</label>
+              <div class="grid grid-cols-2 gap-2">
+                <input type="number" id="prodStock" required value="3" min="0" class="w-full font-mono bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+                <input type="text" id="prodWarranty" required placeholder="Resmi 1 Tahun" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] text-platinum-400 mb-1">Kecocokan Utama</label>
+              <select id="prodIdealFor" class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+                <option value="Bisnis/Portabilitas">Bisnis/Portabilitas</option>
+                <option value="Desain/Video/Coding">Desain/Video/Coding</option>
+                <option value="Gaming Berat">Gaming Berat</option>
+                <option value="Kuliah/Tugas/Ngetik">Kuliah/Tugas/Ngetik</option>
+              </select>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label class="block text-[11px] text-platinum-400 mb-1">URL Gambar Produk (Kosongkan untuk gambar default elegan)</label>
+              <input type="url" id="prodImage" placeholder="https://images.unsplash.com/..." class="w-full bg-obsidian-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-champagne-500">
+            </div>
+
+            <div class="sm:col-span-2 lg:col-span-3 flex justify-end pt-1">
+              <button type="submit" id="adminSubmitProductBtn" class="btn-gold-gradient px-5 py-2.5 rounded-xl text-xs font-bold">
+                Simpan Unit ke Katalog
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Product Management Table -->
+        <div class="space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h4 class="text-sm font-bold uppercase tracking-wider text-white">Daftar Unit di Katalog (<span id="adminProductCount">0</span>)</h4>
+            <button type="button" onclick="resetCatalogToDefault()" class="px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-300 text-xs font-semibold transition">
+              Reset Katalog ke Data Awal
+            </button>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-white/10">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-obsidian-950 text-platinum-400 uppercase font-mono text-[11px]">
+                <tr>
+                  <th class="px-4 py-3">Seri Laptop</th>
+                  <th class="px-4 py-3">Kondisi & Kategori</th>
+                  <th class="px-4 py-3">Harga Promo</th>
+                  <th class="px-4 py-3">Stok</th>
+                  <th class="px-4 py-3 text-right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductTableBody" class="divide-y divide-white/10 bg-obsidian-900/50">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT APPLICATION LOGIC ==================== -->
+  <script>
+    // ==================== 1. DEFAULT DATA & STORAGE KEYS ====================
+    const STORAGE_KEYS = {
+      PRODUCTS: 'veldortech_products_v1',
+      SETTINGS: 'veldortech_settings_v1',
+      CART: 'veldortech_cart_v1',
+      ORDERS: 'veldortech_orders_v1'
+    };
+
+    const DEFAULT_SETTINGS = {
+      storeName: 'Rizky Tech',
+      tagline: 'Luxury Hardware Atelier',
+      whatsappNumber: '6281298887766',
+      address: 'SCBD District 8, Gallery Level 2, Jakarta Selatan'
+    };
+
+    const DEFAULT_PRODUCTS = [
+      {
+        id: 'lp-101',
+        name: 'MacBook Pro 14" M3 Pro (18GB / 512GB)',
+        category: 'Gaming & Kreator',
+        condition: 'Baru Resmi',
+        cpu: 'Apple M3 Pro (11-Core CPU)',
+        gpu: '14-Core Integrated GPU',
+        ram: '18GB Unified',
+        storage: '512GB SSD',
+        display: '14.2" Liquid Retina XDR 120Hz',
+        batteryWeight: '1.61 kg / 18 Jam',
+        normalPrice: 34999000,
+        promoPrice: 31499000,
+        stock: 3,
+        warranty: 'Resmi iBox 1 Tahun',
+        idealFor: 'Desain/Video/Coding',
+        image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80',
+        description: 'Workstation portabel terbaik dengan layar Mini-LED XDR 1600 nits, efisiensi baterai luar biasa, dan performa rendering video 4K/8K tanpa kipas berisik.'
+      },
+      {
+        id: 'lp-102',
+        name: 'ASUS ROG Zephyrus G14 (2024) OLED',
+        category: 'Gaming & Kreator',
+        condition: 'Baru Resmi',
+        cpu: 'AMD Ryzen 9 8945HS',
+        gpu: 'NVIDIA RTX 4060 8GB (90W)',
+        ram: '16GB LPDDR5X',
+        storage: '1TB PCIe 4.0 NVMe',
+        display: '14" 3K ROG Nebula OLED 120Hz',
+        batteryWeight: '1.50 kg / 10 Jam',
+        normalPrice: 27999000,
+        promoPrice: 25499000,
+        stock: 2,
+        warranty: 'Resmi ASUS 2 Tahun + VIP',
+        idealFor: 'Gaming Berat',
+        image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=900&q=80',
+        description: 'Sasis CNC-machined aluminium ultraringan 1.5kg dengan layar OLED Pantone Validated dan GPU RTX 4060 bertenaga untuk gaming AAA maupun color grading.'
+      },
+      {
+        id: 'lp-103',
+        name: 'Lenovo ThinkPad X1 Carbon Gen 11',
+        category: 'Ultrabook & Kerja',
+        condition: 'Second Terkurasi',
+        cpu: 'Intel Core i7-1365U vPro',
+        gpu: 'Intel Iris Xe Graphics',
+        ram: '16GB LPDDR5',
+        storage: '512GB NVMe Gen4',
+        display: '14" WUXGA IPS Anti-Glare 100% sRGB',
+        batteryWeight: '1.12 kg / 14 Jam',
+        normalPrice: 18500000,
+        promoPrice: 14850000,
+        stock: 4,
+        warranty: 'Garansi Toko 30 Hari + 1 Thn Servis',
+        idealFor: 'Bisnis/Portabilitas',
+        image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=80',
+        description: 'Standar emas laptop eksekutif berbahan serat karbon ultraringan 1.12 kg. Kondisi fisik 98% mulus seperti baru, baterai health 94%, lolos standar militer MIL-STD-810H.'
+      },
+      {
+        id: 'lp-104',
+        name: 'MacBook Air 13" M1 (8GB / 256GB) Space Gray',
+        category: 'Second/Refurbished Bergaransi',
+        condition: 'Second Terkurasi',
+        cpu: 'Apple M1 8-Core',
+        gpu: '7-Core Apple GPU',
+        ram: '8GB Unified',
+        storage: '256GB SSD',
+        display: '13.3" Retina True Tone 400 nits',
+        batteryWeight: '1.29 kg / 15 Jam',
+        normalPrice: 11200000,
+        promoPrice: 8950000,
+        stock: 5,
+        warranty: 'Garansi Toko 30 Hari + 1 Thn Servis',
+        idealFor: 'Kuliah/Tugas/Ngetik',
+        image: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=900&q=80',
+        description: 'Pilihan paling cerdas untuk mahasiswa & kreator konten ringan. Desain tanpa kipas (hening total), baterai awet seharian, Battery Health 92%+, kelengkapan charger original.'
+      },
+      {
+        id: 'lp-105',
+        name: 'Dell XPS 13 Plus 9320 OLED Touch',
+        category: 'Ultrabook & Kerja',
+        condition: 'Second Terkurasi',
+        cpu: 'Intel Core i7-1260P (12-Core)',
+        gpu: 'Intel Iris Xe Graphics',
+        ram: '16GB LPDDR5',
+        storage: '1TB PCIe NVMe',
+        display: '13.4" 3.5K OLED InfinityEdge Touch',
+        batteryWeight: '1.24 kg / 11 Jam',
+        normalPrice: 21000000,
+        promoPrice: 16200000,
+        stock: 2,
+        warranty: 'Garansi Toko 30 Hari + 1 Thn Servis',
+        idealFor: 'Bisnis/Portabilitas',
+        image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=80',
+        description: 'Desain futuristik dengan seamless glass touchpad, keyboard zero-lattice, dan layar sentuh 3.5K OLED yang memukau untuk presentasi bisnis maupun desain.'
+      },
+      {
+        id: 'lp-106',
+        name: 'HP Victus 15 RTX 4050 (2024)',
+        category: 'Gaming & Kreator',
+        condition: 'Baru Resmi',
+        cpu: 'Intel Core i5-13500H (12-Core)',
+        gpu: 'NVIDIA GeForce RTX 4050 6GB',
+        ram: '16GB DDR4 3200MHz',
+        storage: '512GB NVMe SSD',
+        display: '15.6" FHD IPS 144Hz',
+        batteryWeight: '2.29 kg / 7 Jam',
+        normalPrice: 15499000,
+        promoPrice: 13799000,
+        stock: 4,
+        warranty: 'Resmi HP Indonesia 2 Tahun + ADP',
+        idealFor: 'Gaming Berat',
+        image: 'https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=900&q=80',
+        description: 'Laptop gaming minimalis dengan sistem pendingin ganda yang senyap. Sudah dilengkapi DLSS 3 Frame Generation untuk melibas game modern di setting High.'
+      },
+      {
+        id: 'lp-107',
+        name: 'Acer Swift Go 14 OLED (Core Ultra 5)',
+        category: 'Ultrabook & Kerja',
+        condition: 'Baru Resmi',
+        cpu: 'Intel Core Ultra 5 125H (AI Boost)',
+        gpu: 'Intel Arc Graphics',
+        ram: '16GB LPDDR5X',
+        storage: '512GB Gen4 SSD',
+        display: '14" 2.8K OLED 90Hz 100% DCI-P3',
+        batteryWeight: '1.32 kg / 12 Jam',
+        normalPrice: 13499000,
+        promoPrice: 11899000,
+        stock: 6,
+        warranty: 'Resmi Acer Indonesia 2 Tahun',
+        idealFor: 'Desain/Video/Coding',
+        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80',
+        description: 'Ultrabook AI modern dengan layar 2.8K OLED super tajam, kamera QHD 1440p untuk meeting jernih, dan bobot ringan hanya 1.32 kg.'
+      },
+      {
+        id: 'lp-108',
+        name: 'Lenovo IdeaPad Slim 3 Ryzen 5',
+        category: 'Laptop Pelajar/Hemat',
+        condition: 'Baru Resmi',
+        cpu: 'AMD Ryzen 5 7520U',
+        gpu: 'AMD Radeon 610M',
+        ram: '8GB LPDDR5',
+        storage: '512GB NVMe SSD',
+        display: '14" FHD IPS Anti-Glare',
+        batteryWeight: '1.37 kg / 10 Jam',
+        normalPrice: 7499000,
+        promoPrice: 6499000,
+        stock: 7,
+        warranty: 'Resmi Lenovo 2 Tahun + Office Home',
+        idealFor: 'Kuliah/Tugas/Ngetik',
+        image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=900&q=80',
+        description: 'Laptop pelajar & mahasiswa paling seimbang di kelas harga 6 jutaan. Sudah termasuk Windows 11 Original + Office Home & Student permanen.'
+      }
+    ];
+
+    const UPGRADE_OPTIONS = [
+      { id: 'upg-ram', label: 'Upgrade +16GB RAM DDR5 / High-Speed', price: 750000, note: 'Kompatibel unit non-soldered / konfigurasi' },
+      { id: 'upg-ssd', label: 'Tambah / Upgrade 1TB NVMe Gen4 SSD', price: 1150000, note: 'Kecepatan baca hingga 7000MB/s' },
+      { id: 'upg-acc', label: 'Paket Proteksi: Sleeve Kulit + Mouse Wireless + Screen Guard', price: 350000, note: 'Hemat Rp 150rb' },
+      { id: 'upg-war', label: 'Perpanjangan Garansi VIP Proteksi Total 1 Tahun', price: 450000, note: 'Cover kerusakan komponen & layar' }
+    ];
+
+    const DEFAULT_SAMPLE_ORDERS = {
+      'VLD-2026-881': {
+        code: 'VLD-2026-881',
+        customer: 'Raka Pratama',
+        items: 'MacBook Pro 14" M3 Pro (18GB / 512GB)',
+        status: 'Garansi Aktif & Terkirim',
+        date: '12 Nov 2026',
+        warrantyUntil: '12 Nov 2027 (Resmi + Toko)',
+        notes: 'Unit lolos 42-point QC, dikirim via JNE YES + Packing Kayu.'
+      },
+      'VLD-2026-904': {
+        code: 'VLD-2026-904',
+        customer: 'Nadia Kusuma',
+        items: 'Lenovo ThinkPad X1 Carbon Gen 11 (Second Terkurasi)',
+        status: 'Dalam Pengiriman (Kurir Asuransi)',
+        date: '18 Nov 2026',
+        warrantyUntil: '18 Des 2026 (Tukar Unit) / 18 Nov 2027 (Servis)',
+        notes: 'Battery Health 94%, sudah di-install Windows 11 Pro & Office.'
+      }
+    };
+
+    // ==================== 2. STATE MANAGEMENT ====================
+    let products = [];
+    let storeSettings = {};
+    let cart = [];
+    let ordersHistory = {};
+
+    let activeCategory = 'Semua';
+    let searchQuery = '';
+    let compareIds = [];
+    let recommendedIds = [];
+
+    // Advisor state
+    let selectedNeed = null;
+    let selectedBudget = null;
+
+    // Detail modal state
+    let currentDetailProductId = null;
+    let selectedUpgradeIds = [];
+
+    // Admin auth state
+    let isAdminAuthenticated = false;
+
+    // ==================== 3. INITIALIZATION ====================
+    let scrollRevealObserver;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadFromLocalStorage();
+      applyStoreSettingsToUI();
+      initScrollAnimations();
+      renderCatalog();
+      populateInstallmentDropdown();
+      calculateInstallment();
+      calculateTradeIn();
+      updateCartUI();
+      lucide.createIcons();
+
+      setTimeout(openWelcomeModal, 450);
+
+      // Check URL hash #admin
+      if (window.location.hash === '#admin') {
+        openAdminAccess();
+      }
+    });
+
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash === '#admin') {
+        openAdminAccess();
+      }
+    });
+
+    function loadFromLocalStorage() {
+      try {
+        const savedProducts = localStorage.getItem(STORAGE_KEYS.PRODUCTS);
+        products = savedProducts ? JSON.parse(savedProducts) : [...DEFAULT_PRODUCTS];
+        if (!savedProducts) localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
+
+        const savedSettings = localStorage.getItem(STORAGE_KEYS.SETTINGS);
+        storeSettings = savedSettings ? JSON.parse(savedSettings) : { ...DEFAULT_SETTINGS };
+        if (!savedSettings || storeSettings.storeName === 'VELDOR TECH') {
+          storeSettings.storeName = 'Rizky Tech';
+          localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(storeSettings));
+        }
+
+        const savedCart = localStorage.getItem(STORAGE_KEYS.CART);
+        cart = savedCart ? JSON.parse(savedCart) : [];
+
+        const savedOrders = localStorage.getItem(STORAGE_KEYS.ORDERS);
+        ordersHistory = savedOrders ? { ...DEFAULT_SAMPLE_ORDERS, ...JSON.parse(savedOrders) } : { ...DEFAULT_SAMPLE_ORDERS };
+      } catch (e) {
+        console.error('Error loading localStorage:', e);
+        products = [...DEFAULT_PRODUCTS];
+        storeSettings = { ...DEFAULT_SETTINGS };
+        cart = [];
+        ordersHistory = { ...DEFAULT_SAMPLE_ORDERS };
+      }
+    }
+
+    function saveProductsToStorage() {
+      localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
+    }
+
+    function saveCartToStorage() {
+      localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify(cart));
+    }
+
+    function initScrollAnimations() {
+      const revealTargets = document.querySelectorAll(
+        '#top .grid > div, #bantu-pilih .glass-card, #simulasi-tools .glass-card, #cek-garansi .lg\\:col-span-5, #cek-garansi .lg\\:col-span-7, #faqContainer > div, footer > div'
+      );
+      scrollRevealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            scrollRevealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+
+      observeScrollRevealElements(revealTargets);
+    }
+
+    function observeScrollRevealElements(elements) {
+      if (!scrollRevealObserver) return;
+      elements.forEach((element, index) => {
+        if (element.classList.contains('scroll-reveal')) return;
+        element.classList.add('scroll-reveal');
+        if (element.closest('#productGrid')) {
+          element.style.transitionDelay = `${(index % 4) * 75}ms`;
+        }
+        scrollRevealObserver.observe(element);
+      });
+    }
+
+    // ==================== 4. FORMATTING & FALLBACK SVG ====================
+    function formatRupiah(num) {
+      return 'Rp ' + Math.round(num).toLocaleString('id-ID');
+    }
+
+    function getFallbackHardwareSVG(label = 'VELDOR HARDWARE') {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+        <defs>
+          <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#161924"/>
+            <stop offset="100%" stop-color="#090A0F"/>
+          </linearGradient>
+          <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#F3E5AB"/>
+            <stop offset="100%" stop-color="#D4AF37"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="500" fill="url(#bg)"/>
+        <rect x="210" y="120" width="380" height="230" rx="14" fill="#1D2130" stroke="url(#gold)" stroke-width="2"/>
+        <rect x="226" y="136" width="348" height="198" rx="6" fill="#0B0D14"/>
+        <path d="M165 352 H635 L615 372 H185 Z" fill="#2A2F42" stroke="#D4AF37" stroke-width="1.5"/>
+        <text x="400" y="242" fill="#D4AF37" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle" letter-spacing="3">${label}</text>
+      </svg>`;
+      return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    }
+
+    function openWelcomeModal() {
+      const modal = document.getElementById('welcomeModal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+      modal.querySelector('button[aria-label="Tutup sambutan"]').focus();
+    }
+
+    function closeWelcomeModal() {
+      const modal = document.getElementById('welcomeModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !document.getElementById('welcomeModal').classList.contains('hidden')) {
+        closeWelcomeModal();
+      }
+    });
+
+    function showToast(title, message, type = 'gold') {
+      const container = document.getElementById('toastContainer');
+      const id = 'toast-' + Date.now();
+      const borderClass = type === 'success' ? 'border-emerald-500/50' : type === 'error' ? 'border-red-500/50' : 'border-champagne-500/50';
+      const iconColor = type === 'success' ? 'text-emerald-400' : type === 'error' ? 'text-red-400' : 'text-champagne-400';
+      const iconName = type === 'success' ? 'check-circle-2' : type === 'error' ? 'alert-circle' : 'sparkles';
+
+      const toastEl = document.createElement('div');
+      toastEl.id = id;
+      toastEl.className = `pointer-events-auto bg-obsidian-900/95 backdrop-blur-md border ${borderClass} rounded-xl p-3.5 shadow-card-elevated flex items-start gap-3 transition-all duration-300`;
+      toastEl.innerHTML = `
+        <i data-lucide="${iconName}" class="w-4 h-4 ${iconColor} shrink-0 mt-0.5"></i>
+        <div class="flex-1 min-w-0">
+          <p class="text-xs font-bold text-white">${title}</p>
+          <p class="text-[11px] text-platinum-300 mt-0.5 leading-snug">${message}</p>
+        </div>
+      `;
+      container.appendChild(toastEl);
+      lucide.createIcons();
+
+      setTimeout(() => {
+        toastEl.style.opacity = '0';
+        toastEl.style.transform = 'translateX(16px)';
+        setTimeout(() => toastEl.remove(), 300);
+      }, 3200);
+    }
+
+    // ==================== 5. NAVIGATION, SEARCH & FILTERING ====================
+    function applyStoreSettingsToUI() {
+      document.getElementById('headerStoreName').textContent = storeSettings.storeName;
+      document.getElementById('headerStoreTagline').textContent = storeSettings.tagline;
+      document.getElementById('footerStoreName').textContent = storeSettings.storeName;
+      document.getElementById('footerStoreAddress').textContent = storeSettings.address;
+      document.getElementById('footerCopyrightName').textContent = storeSettings.storeName;
+      document.title = `${storeSettings.storeName} — Curated Flagship Laptops & Precision Hardware`;
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      document.getElementById('desktopSearchInput').value = val;
+      document.getElementById('mobileSearchInput').value = val;
+      
+      const hasVal = searchQuery.length > 0;
+      document.getElementById('clearSearchDesktop').classList.toggle('hidden', !hasVal);
+      document.getElementById('clearSearchMobile').classList.toggle('hidden', !hasVal);
+
+      renderCatalog();
+    }
+
+    function clearSearch() {
+      handleSearch('');
+    }
+
+    function setCategoryFilter(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        const isMatch = btn.dataset.cat === cat;
+        if (isMatch) {
+          btn.className = 'cat-pill shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold border transition bg-champagne-500 text-obsidian-950 border-champagne-500';
+        } else {
+          btn.className = 'cat-pill shrink-0 px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-obsidian-900 text-platinum-300 hover:border-champagne-500/40 transition';
+        }
+      });
+      renderCatalog();
+    }
+
+    function resetAllFilters() {
+      clearSearch();
+      setCategoryFilter('Semua');
+      resetAdvisor();
+    }
+
+    function openDirectWAConsultation() {
+      const msg = `Halo Admin *${storeSettings.storeName}*, saya ingin konsultasi rekomendasi laptop yang tersedia saat ini. Terima kasih!`;
+      window.open(`https://wa.me/${storeSettings.whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // ==================== 6. SMART RECOMMENDATION ("BANTU PILIH LAPTOP") ====================
+    function selectAdvisorNeed(btn) {
+      selectedNeed = btn.dataset.need;
+      document.querySelectorAll('.advisor-need-btn').forEach(el => {
+        el.classList.remove('border-champagne-500', 'bg-champagne-500/10');
+        el.classList.add('border-white/10', 'bg-obsidian-950/90');
+      });
+      btn.classList.remove('border-white/10', 'bg-obsidian-950/90');
+      btn.classList.add('border-champagne-500', 'bg-champagne-500/10');
+    }
+
+    function selectAdvisorBudget(btn) {
+      selectedBudget = btn.dataset.budget;
+      document.querySelectorAll('.advisor-budget-btn').forEach(el => {
+        el.classList.remove('border-champagne-500', 'bg-champagne-500/10');
+        el.classList.add('border-white/10', 'bg-obsidian-950/90');
+      });
+      btn.classList.remove('border-white/10', 'bg-obsidian-950/90');
+      btn.classList.add('border-champagne-500', 'bg-champagne-500/10');
+    }
+
+    function applySmartRecommendation() {
+      if (!selectedNeed && !selectedBudget) {
+        showToast('Pilih Kriteria', 'Silakan pilih kebutuhan utama atau rentang anggaran terlebih dahulu.');
+        return;
+      }
+
+      // Reset category filter to show all matching recommendations
+      setCategoryFilter('Semua');
+
+      const matched = products.filter(p => {
+        let needMatch = true;
+        let budgetMatch = true;
+
+        if (selectedNeed) {
+          needMatch = p.idealFor === selectedNeed ||
+            (selectedNeed === 'Kuliah/Tugas/Ngetik' && (p.category === 'Laptop Pelajar/Hemat' || p.promoPrice <= 12500000)) ||
+            (selectedNeed === 'Bisnis/Portabilitas' && p.category === 'Ultrabook & Kerja') ||
+            (selectedNeed === 'Desain/Video/Coding' && (p.category === 'Gaming & Kreator' || p.ram.includes('16GB') || p.ram.includes('18GB')));
+        }
+
+        if (selectedBudget) {
+          if (selectedBudget === 'under7') budgetMatch = p.promoPrice < 7000000;
+          if (selectedBudget === '7to12') budgetMatch = p.promoPrice >= 7000000 && p.promoPrice <= 12000000;
+          if (selectedBudget === '12to20') budgetMatch = p.promoPrice > 12000000 && p.promoPrice <= 20000000;
+          if (selectedBudget === 'above20') budgetMatch = p.promoPrice > 20000000;
+        }
+
+        return needMatch && budgetMatch;
+      });
+
+      recommendedIds = matched.map(m => m.id);
+      const banner = document.getElementById('advisorResultBanner');
+      const resetBtn = document.getElementById('resetAdvisorBtn');
+      banner.classList.remove('hidden');
+      resetBtn.classList.remove('hidden');
+      resetBtn.classList.add('inline-flex');
+
+      const needText = selectedNeed || 'Semua Aktivitas';
+      const budgetLabels = { under7: '< Rp 7 Juta', '7to12': 'Rp 7 - 12 Juta', '12to20': 'Rp 12 - 20 Juta', above20: '> Rp 20 Juta' };
+      const budgetText = selectedBudget ? budgetLabels[selectedBudget] : 'Semua Anggaran';
+
+      if (matched.length > 0) {
+        document.getElementById('advisorResultTitle').textContent = `Ditemukan ${matched.length} Laptop Ideal untuk Anda!`;
+        document.getElementById('advisorResultDesc').textContent = `Kriteria: ${needText} • Anggaran: ${budgetText}. Kartu dengan bingkai emas di bawah adalah unit yang paling direkomendasikan.`;
+      } else {
+        // Fallback: highlight closest price match
+        const closest = [...products].sort((a, b) => a.promoPrice - b.promoPrice).slice(0, 2);
+        recommendedIds = closest.map(c => c.id);
+        document.getElementById('advisorResultTitle').textContent = `Menampilkan Alternatif Paling Mendekati`;
+        document.getElementById('advisorResultDesc').textContent = `Tidak ada kecocokan persis untuk kombinasi ${needText} (${budgetText}), namun 2 unit terbaik di katalog telah disorot sebagai opsi rasional.`;
+      }
+
+      renderCatalog();
+      document.getElementById('katalog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function resetAdvisor() {
+      selectedNeed = null;
+      selectedBudget = null;
+      recommendedIds = [];
+      document.querySelectorAll('.advisor-need-btn, .advisor-budget-btn').forEach(el => {
+        el.classList.remove('border-champagne-500', 'bg-champagne-500/10');
+        el.classList.add('border-white/10', 'bg-obsidian-950/90');
+      });
+      document.getElementById('advisorResultBanner').classList.add('hidden');
+      document.getElementById('resetAdvisorBtn').classList.add('hidden');
+      renderCatalog();
+    }
+
+    // ==================== 7. CATALOG RENDERING ====================
+    function renderCatalog() {
+      const grid = document.getElementById('productGrid');
+      const emptyState = document.getElementById('emptyCatalogState');
+      const sortVal = document.getElementById('sortSelect').value;
+
+      let filtered = products.filter(p => {
+        // Category filter
+        const matchCat = activeCategory === 'Semua' ||
+          p.category === activeCategory ||
+          (activeCategory === 'Second/Refurbished Bergaransi' && p.condition === 'Second Terkurasi');
+
+        // Search filter
+        const searchable = `${p.name} ${p.cpu} ${p.gpu} ${p.ram} ${p.storage} ${p.category} ${p.condition} ${p.idealFor}`.toLowerCase();
+        const matchSearch = !searchQuery || searchable.includes(searchQuery);
+
+        return matchCat && matchSearch;
+      });
+
+      // If advisor active and has matches, prioritize recommended items at top
+      if (recommendedIds.length > 0) {
+        filtered.sort((a, b) => {
+          const aRec = recommendedIds.includes(a.id) ? 1 : 0;
+          const bRec = recommendedIds.includes(b.id) ? 1 : 0;
+          return bRec - aRec;
+        });
+      }
+
+      // Secondary Sorting
+      if (sortVal === 'price-asc') {
+        filtered.sort((a, b) => a.promoPrice - b.promoPrice);
+      } else if (sortVal === 'price-desc') {
+        filtered.sort((a, b) => b.promoPrice - a.promoPrice);
+      } else if (sortVal === 'condition-new') {
+        filtered.sort((a, b) => (a.condition === 'Baru Resmi' ? -1 : 1));
+      }
+
+      document.getElementById('catalogCountLabel').textContent = `Menampilkan ${filtered.length} dari ${products.length} unit`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        lucide.createIcons();
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(p => {
+        const isRecommended = recommendedIds.includes(p.id);
+        const isCompared = compareIds.includes(p.id);
+        const discountPct = p.normalPrice > p.promoPrice ? Math.round(((p.normalPrice - p.promoPrice) / p.normalPrice) * 100) : 0;
+        const isNew = p.condition === 'Baru Resmi';
+        const outOfStock = p.stock <= 0;
+
+        return `
+          <article class="glass-card rounded-2xl border ${isRecommended ? 'recommended-highlight border-champagne-500' : 'border-white/10 hover:border-champagne-500/40'} overflow-hidden flex flex-col justify-between transition-all duration-300 group">
+            
+            <div>
+              <!-- Image & Badges -->
+              <div class="relative aspect-[16/10] bg-obsidian-950 overflow-hidden border-b border-white/10">
+                <img 
+                  src="${p.image || getFallbackHardwareSVG(p.name)}" 
+                  alt="${p.name}"
+                  onerror="this.onerror=null;this.src=getFallbackHardwareSVG('${p.name.replace(/'/g, '')}');"
+                  onclick="openDetailModal('${p.id}')"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500 cursor-pointer"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950/90 via-transparent to-obsidian-950/30 pointer-events-none"></div>
+
+                <!-- Top Left Condition Badge -->
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider backdrop-blur-md ${isNew ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-champagne-500/20 text-champagne-300 border border-champagne-500/40'}">
+                    ${p.condition}
+                  </span>
+                  ${isRecommended ? `<span class="px-2 py-1 rounded-lg text-[10px] font-bold bg-champagne-500 text-obsidian-950 flex items-center gap-1"><i data-lucide="sparkles" class="w-3 h-3"></i> Cocok</span>` : ''}
+                </div>
+
+                <!-- Top Right Compare Checkbox -->
+                <button 
+                  type="button"
+                  onclick="toggleCompare('${p.id}')"
+                  class="absolute top-3 right-3 px-2.5 py-1 rounded-lg text-[11px] font-semibold backdrop-blur-md border transition flex items-center gap-1.5 ${isCompared ? 'bg-champagne-500 text-obsidian-950 border-champagne-500 font-bold' : 'bg-obsidian-950/75 text-platinum-200 border-white/15 hover:border-champagne-500/60'}"
+                  title="Bandingkan Spesifikasi"
+                >
+                  <i data-lucide="${isCompared ? 'check-square' : 'square'}" class="w-3.5 h-3.5"></i>
+                  <span>Bandingkan</span>
+                </button>
+
+                <!-- Bottom Stock & Discount -->
+                <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[11px]">
+                  <span class="font-mono ${outOfStock ? 'text-red-400' : 'text-platinum-200'} bg-obsidian-950/80 px-2 py-0.5 rounded border border-white/10">
+                    ${outOfStock ? 'Stok Habis' : `Stok: ${p.stock} unit`}
+                  </span>
+                  ${discountPct > 0 ? `<span class="font-mono font-bold text-champagne-300 bg-champagne-500/20 px-2 py-0.5 rounded border border-champagne-500/30">Hemat ${discountPct}%</span>` : ''}
+                </div>
+              </div>
+
+              <!-- Card Content -->
+              <div class="p-4 sm:p-5 space-y-3.5">
+                <div>
+                  <div class="flex items-center justify-between gap-2 text-[11px] text-platinum-400 mb-1">
+                    <span>${p.category}</span>
+                    <span class="text-champagne-400/90 font-medium">${p.warranty}</span>
+                  </div>
+                  <h3 onclick="openDetailModal('${p.id}')" class="text-base font-bold text-white group-hover:text-champagne-300 transition cursor-pointer line-clamp-2 leading-snug">
+                    ${p.name}
+                  </h3>
+                </div>
+
+                <!-- Core Specs Grid -->
+                <div class="grid grid-cols-2 gap-2 p-2.5 rounded-xl bg-obsidian-950/80 border border-white/5 text-[11px]">
+                  <div class="flex items-center gap-1.5 text-platinum-300 truncate" title="${p.cpu}">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5 text-champagne-400 shrink-0"></i>
+                    <span class="truncate">${p.cpu}</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-platinum-300 truncate" title="${p.ram} / ${p.storage}">
+                    <i data-lucide="memory-stick" class="w-3.5 h-3.5 text-champagne-400 shrink-0"></i>
+                    <span class="truncate">${p.ram} / ${p.storage}</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-platinum-300 truncate" title="${p.display}">
+                    <i data-lucide="monitor" class="w-3.5 h-3.5 text-champagne-400 shrink-0"></i>
+                    <span class="truncate">${p.display}</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-platinum-300 truncate" title="${p.batteryWeight}">
+                    <i data-lucide="battery-charging" class="w-3.5 h-3.5 text-champagne-400 shrink-0"></i>
+                    <span class="truncate">${p.batteryWeight}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing & Actions -->
+            <div class="px-4 sm:px-5 pb-5 pt-2 border-t border-white/5 space-y-3">
+              <div>
+                ${p.normalPrice > p.promoPrice ? `<p class="font-mono text-xs text-platinum-500 line-through">${formatRupiah(p.normalPrice)}</p>` : ''}
+                <p class="font-mono text-lg sm:text-xl font-extrabold text-white">${formatRupiah(p.promoPrice)}</p>
+              </div>
+
+              <div class="grid grid-cols-12 gap-2">
+                <button 
+                  type="button"
+                  onclick="openDetailModal('${p.id}')"
+                  class="col-span-6 py-2.5 px-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-xs font-semibold text-platinum-100 transition text-center"
+                >
+                  Detail &amp; Upgrade
+                </button>
+                <button 
+                  type="button"
+                  ${outOfStock ? 'disabled' : ''}
+                  onclick="addToCart('${p.id}', [])"
+                  class="col-span-6 py-2.5 px-3 rounded-xl ${outOfStock ? 'bg-white/5 text-platinum-500 cursor-not-allowed' : 'btn-gold-gradient font-bold'} text-xs flex items-center justify-center gap-1.5"
+                >
+                  <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+                  <span>${outOfStock ? 'Habis' : '+ Keranjang'}</span>
+                </button>
+              </div>
+            </div>
+
+          </article>
+        `;
+      }).join('');
+
+      observeScrollRevealElements(grid.querySelectorAll(':scope > article'));
+      lucide.createIcons();
+    }
+
+    // ==================== 8. SPEC COMPARISON FEATURE ====================
+    function toggleCompare(productId) {
+      const idx = compareIds.indexOf(productId);
+      if (idx > -1) {
+        compareIds.splice(idx, 1);
+      } else {
+        if (compareIds.length >= 3) {
+          showToast('Maksimal 3 Unit', 'Anda hanya dapat membandingkan maksimal 3 laptop secara bersamaan.', 'error');
+          return;
+        }
+        compareIds.push(productId);
+      }
+      updateCompareFloatingBar();
+      renderCatalog();
+    }
+
+    function clearCompareList() {
+      compareIds = [];
+      updateCompareFloatingBar();
+      renderCatalog();
+    }
+
+    function updateCompareFloatingBar() {
+      const bar = document.getElementById('compareFloatingBar');
+      if (compareIds.length === 0) {
+        bar.classList.add('hidden');
+        return;
+      }
+
+      bar.classList.remove('hidden');
+      document.getElementById('compareCountBadge').textContent = compareIds.length;
+      const selectedItems = products.filter(p => compareIds.includes(p.id));
+      document.getElementById('compareSelectedNames').textContent = selectedItems.map(i => i.name).join('  vs  ');
+    }
+
+    function openCompareModal() {
+      if (compareIds.length < 2) {
+        showToast('Pilih Minimal 2 Laptop', 'Centang minimal 2 laptop pada katalog untuk membandingkan spesifikasi.', 'gold');
+        return;
+      }
+
+      const items = products.filter(p => compareIds.includes(p.id));
+      const modal = document.getElementById('compareModal');
+      const body = document.getElementById('compareModalBody');
+
+      const rows = [
+        { label: 'Kondisi & Garansi', render: p => `<span class="font-bold text-champagne-300">${p.condition}</span><br><span class="text-platinum-400">${p.warranty}</span>` },
+        { label: 'Harga Promo', render: p => `<span class="font-mono text-sm font-extrabold text-white">${formatRupiah(p.promoPrice)}</span>` },
+        { label: 'Prosesor (CPU)', render: p => p.cpu },
+        { label: 'Kartu Grafis (GPU)', render: p => p.gpu },
+        { label: 'Memori (RAM)', render: p => p.ram },
+        { label: 'Penyimpanan (SSD)', render: p => p.storage },
+        { label: 'Layar', render: p => p.display },
+        { label: 'Berat & Baterai', render: p => p.batteryWeight },
+        { label: 'Kecocokan Utama', render: p => `<span class="px-2.5 py-1 rounded-lg bg-champagne-500/15 text-champagne-300 font-semibold">${p.idealFor}</span>` }
+      ];
+
+      body.innerHTML = `
+        <table class="w-full text-left border-collapse min-w-[600px]">
+          <thead>
+            <tr>
+              <th class="p-3 w-44 text-xs font-mono uppercase text-platinum-400 border-b border-white/10">Spesifikasi</th>
+              ${items.map(p => `
+                <th class="p-3 border-b border-white/10 align-top">
+                  <div class="space-y-2">
+                    <img src="${p.image}" onerror="this.onerror=null;this.src=getFallbackHardwareSVG('${p.name}');" class="w-full h-28 object-cover rounded-xl border border-white/10">
+                    <p class="text-sm font-bold text-white leading-snug">${p.name}</p>
+                    <button onclick="closeCompareModal(); addToCart('${p.id}', [])" class="btn-gold-gradient px-3 py-1.5 rounded-lg text-[11px] font-bold">+ Keranjang</button>
+                  </div>
+                </th>
+              `).join('')}
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 text-xs">
+            ${rows.map(r => `
+              <tr class="hover:bg-white/[0.02]">
+                <td class="p-3.5 font-semibold text-platinum-400 bg-obsidian-950/50">${r.label}</td>
+                ${items.map(p => `<td class="p-3.5 text-platinum-100">${r.render(p)}</td>`).join('')}
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+
+      modal.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeCompareModal() {
+      document.getElementById('compareModal').classList.add('hidden');
+    }
+
+    // ==================== 9. QUICK VIEW / DETAIL & UPGRADE CONFIGURATOR ====================
+    function openDetailModal(productId) {
+      const p = products.find(item => item.id === productId);
+      if (!p) return;
+
+      currentDetailProductId = productId;
+      selectedUpgradeIds = [];
+
+      const modal = document.getElementById('detailModal');
+      const body = document.getElementById('detailModalBody');
+
+      body.innerHTML = `
+        <div class="sticky top-0 z-10 bg-obsidian-900/95 backdrop-blur px-6 py-4 border-b border-white/10 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase ${p.condition === 'Baru Resmi' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-champagne-500/20 text-champagne-300'}">${p.condition}</span>
+            <span class="text-xs text-platinum-400">${p.category}</span>
+          </div>
+          <button onclick="closeDetailModal()" class="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-platinum-300">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="p-6 grid lg:grid-cols-12 gap-6">
+          <!-- Left Image & Description -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 aspect-[16/11] bg-obsidian-950">
+              <img src="${p.image}" onerror="this.onerror=null;this.src=getFallbackHardwareSVG('${p.name}');" class="w-full h-full object-cover">
+            </div>
+            <p class="text-xs sm:text-sm text-platinum-300 leading-relaxed">${p.description || 'Unit pilihan terkurasi dengan standar inspeksi kualitas tinggi.'}</p>
+            <div class="p-3.5 rounded-xl bg-obsidian-950 border border-white/10 space-y-1.5 text-xs">
+              <div class="flex justify-between"><span class="text-platinum-400">Status Stok:</span><span class="font-mono font-bold text-white">${p.stock} Unit Tersedia</span></div>
+              <div class="flex justify-between"><span class="text-platinum-400">Perlindungan Garansi:</span><span class="font-semibold text-champagne-300">${p.warranty}</span></div>
+              <div class="flex justify-between"><span class="text-platinum-400">Rekomendasi Pakai:</span><span class="text-white">${p.idealFor}</span></div>
+            </div>
+          </div>
+
+          <!-- Right Full Specs & Upgrade Options -->
+          <div class="lg:col-span-7 space-y-5">
+            <div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-white">${p.name}</h3>
+              <div class="flex items-baseline gap-3 mt-1.5">
+                <span class="font-mono text-2xl font-extrabold text-champagne-400">${formatRupiah(p.promoPrice)}</span>
+                ${p.normalPrice > p.promoPrice ? `<span class="font-mono text-xs text-platinum-500 line-through">${formatRupiah(p.normalPrice)}</span>` : ''}
+              </div>
+            </div>
+
+            <!-- Full Technical Table -->
+            <div class="grid grid-cols-2 gap-2.5 text-xs">
+              <div class="p-3 rounded-xl bg-obsidian-950 border border-white/5">
+                <span class="block text-[10px] uppercase text-platinum-500">Prosesor</span>
+                <span class="font-semibold text-white mt-0.5 block">${p.cpu}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-950 border border-white/5">
+                <span class="block text-[10px] uppercase text-platinum-500">Grafis (GPU)</span>
+                <span class="font-semibold text-white mt-0.5 block">${p.gpu}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-950 border border-white/5">
+                <span class="block text-[10px] uppercase text-platinum-500">RAM & Storage</span>
+                <span class="font-semibold text-white mt-0.5 block">${p.ram} / ${p.storage}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-950 border border-white/5">
+                <span class="block text-[10px] uppercase text-platinum-500">Layar & Mobilitas</span>
+                <span class="font-semibold text-white mt-0.5 block">${p.display} (${p.batteryWeight})</span>
+              </div>
+            </div>
+
+            <!-- Optional Upgrade Configurator -->
+            <div class="space-y-2.5 pt-2 border-t border-white/10">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-champagne-400">Opsi Upgrade & Aksesoris (Opsional)</span>
+                <span class="text-[11px] text-platinum-400">Harga otomatis terakumulasi</span>
+              </div>
+              <div class="space-y-2">
+                ${UPGRADE_OPTIONS.map(u => `
+                  <label class="flex items-center justify-between gap-3 p-3 rounded-xl bg-obsidian-950 hover:bg-obsidian-850 border border-white/10 cursor-pointer transition">
+                    <div class="flex items-start gap-2.5">
+                      <input type="checkbox" value="${u.id}" onchange="toggleDetailUpgrade('${u.id}')" class="mt-0.5 rounded border-white/20 bg-obsidian-900 text-champagne-500 focus:ring-champagne-500">
+                      <div>
+                        <p class="text-xs font-semibold text-white">${u.label}</p>
+                        <p class="text-[11px] text-platinum-400">${u.note}</p>
+                      </div>
+                    </div>
+                    <span class="font-mono text-xs font-bold text-champagne-300 shrink-0">+${formatRupiah(u.price)}</span>
+                  </label>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Live Total & Add to Cart -->
+            <div class="p-4 rounded-xl bg-obsidian-950 border border-champagne-500/35 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span class="text-[11px] text-platinum-400 block">Total Konfigurasi Unit</span>
+                <span id="detailTotalPrice" class="font-mono text-xl font-extrabold text-white">${formatRupiah(p.promoPrice)}</span>
+              </div>
+              <button 
+                type="button"
+                ${p.stock <= 0 ? 'disabled' : ''}
+                onclick="confirmAddConfiguredToCart()"
+                class="btn-gold-gradient px-6 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2"
+              >
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                <span>Masukkan ke Keranjang</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function toggleDetailUpgrade(upgradeId) {
+      const idx = selectedUpgradeIds.indexOf(upgradeId);
+      if (idx > -1) selectedUpgradeIds.splice(idx, 1);
+      else selectedUpgradeIds.push(upgradeId);
+
+      const p = products.find(item => item.id === currentDetailProductId);
+      if (!p) return;
+
+      const upgradesSum = selectedUpgradeIds.reduce((sum, id) => {
+        const upg = UPGRADE_OPTIONS.find(u => u.id === id);
+        return sum + (upg ? upg.price : 0);
+      }, 0);
+
+      document.getElementById('detailTotalPrice').textContent = formatRupiah(p.promoPrice + upgradesSum);
+    }
+
+    function confirmAddConfiguredToCart() {
+      if (!currentDetailProductId) return;
+      addToCart(currentDetailProductId, [...selectedUpgradeIds]);
+      closeDetailModal();
+      toggleCartDrawer(true);
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.add('hidden');
+      currentDetailProductId = null;
+    }
+
+    // ==================== 10. INSTALLMENT & TRADE-IN CALCULATORS ====================
+    function populateInstallmentDropdown() {
+      const select = document.getElementById('installmentLaptopSelect');
+      select.innerHTML = products.map(p => `<option value="${p.promoPrice}">${p.name} — ${formatRupiah(p.promoPrice)}</option>`).join('') +
+        `<option value="custom">-- Input Harga Manual --</option>`;
+      if (products.length > 0) {
+        document.getElementById('installmentPriceInput').value = products[0].promoPrice;
+      }
+    }
+
+    function syncInstallmentPriceFromSelect() {
+      const val = document.getElementById('installmentLaptopSelect').value;
+      if (val !== 'custom') {
+        document.getElementById('installmentPriceInput').value = val;
+        calculateInstallment();
+      }
+    }
+
+    function calculateInstallment() {
+      const price = Math.max(0, Number(document.getElementById('installmentPriceInput').value) || 0);
+      const dpPercent = Number(document.getElementById('installmentDPSelect').value) || 0;
+      const tenor = Number(document.getElementById('installmentTenorSelect').value) || 12;
+
+      const monthlyRateMap = { 3: 0, 6: 0.008, 12: 0.011, 24: 0.0125 };
+      const rate = monthlyRateMap[tenor] || 0.011;
+
+      const dpAmount = price * (dpPercent / 100);
+      const principal = price - dpAmount;
+      const totalWithInterest = principal + (principal * rate * tenor);
+      const monthly = tenor > 0 ? totalWithInterest / tenor : 0;
+
+      document.getElementById('dpPercentLabel').textContent = `${dpPercent}%`;
+      document.getElementById('dpAmountDisplay').textContent = formatRupiah(dpAmount);
+      document.getElementById('principalDisplay').textContent = formatRupiah(principal);
+      document.getElementById('monthlyInstallmentDisplay').textContent = formatRupiah(monthly);
+    }
+
+    function calculateTradeIn() {
+      const year = document.getElementById('tradeInYear').value;
+      const tier = document.getElementById('tradeInTier').value;
+      const cond = document.getElementById('tradeInCondition').value;
+
+      const baseByTier = {
+        flagship: 10500000,
+        midhigh: 7500000,
+        mid: 5200000,
+        entry: 3000000
+      };
+
+      const yearMultiplier = {
+        '2024': 1.25,
+        '2022': 1.0,
+        '2020': 0.78,
+        '2018': 0.55,
+        '2017': 0.38
+      };
+
+      const condMultiplier = {
+        likenew: 1.12,
+        normal: 1.0,
+        minor: 0.80
+      };
+
+      const estimate = (baseByTier[tier] || 5000000) * (yearMultiplier[year] || 0.8) * (condMultiplier[cond] || 1);
+      const low = Math.round((estimate * 0.92) / 100000) * 100000;
+      const high = Math.round((estimate * 1.08) / 100000) * 100000;
+
+      document.getElementById('tradeInRangeDisplay').textContent = `${formatRupiah(low)} — ${formatRupiah(high)}`;
+    }
+
+    function sendTradeInToWA() {
+      const model = document.getElementById('tradeInModel').value.trim() || 'Laptop Lama (Belum diisi seri)';
+      const year = document.getElementById('tradeInYear').options[document.getElementById('tradeInYear').selectedIndex].text;
+      const tier = document.getElementById('tradeInTier').options[document.getElementById('tradeInTier').selectedIndex].text;
+      const cond = document.getElementById('tradeInCondition').options[document.getElementById('tradeInCondition').selectedIndex].text;
+      const estRange = document.getElementById('tradeInRangeDisplay').textContent;
+
+      const text = `Halo Admin *${storeSettings.storeName}*, saya ingin mengajukan taksiran *Trade-In (Tukar Tambah)*:\n\n` +
+        `• *Unit Lama:* ${model}\n` +
+        `• *Tahun Rilis:* ${year}\n` +
+        `• *Prosesor:* ${tier}\n` +
+        `• *Kondisi:* ${cond}\n` +
+        `• *Estimasi Web:* ${estRange}\n\n` +
+        `Mohon info prosedur pengecekan unitnya. Terima kasih!`;
+
+      window.open(`https://wa.me/${storeSettings.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // ==================== 11. CART & WHATSAPP CHECKOUT ====================
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+      if (open) {
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+      } else {
+        backdrop.classList.add('hidden');
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    function addToCart(productId, upgradeIds = []) {
+      const p = products.find(item => item.id === productId);
+      if (!p || p.stock <= 0) return;
+
+      const sortedUpgrades = [...upgradeIds].sort();
+      const cartKey = `${productId}::${sortedUpgrades.join(',')}`;
+
+      const existing = cart.find(c => c.cartKey === cartKey);
+      if (existing) {
+        if (existing.qty < p.stock) {
+          existing.qty += 1;
+        } else {
+          showToast('Batas Stok Tercapai', `Maksimal stok tersedia untuk ${p.name} adalah ${p.stock} unit.`, 'error');
+          return;
+        }
+      } else {
+        cart.push({
+          cartKey,
+          productId,
+          upgradeIds: sortedUpgrades,
+          qty: 1
+        });
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+      showToast('Ditambahkan ke Keranjang', `${p.name} siap di keranjang belanja.`, 'gold');
+    }
+
+    function updateCartQty(cartKey, delta) {
+      const idx = cart.findIndex(c => c.cartKey === cartKey);
+      if (idx === -1) return;
+
+      const p = products.find(item => item.id === cart[idx].productId);
+      const maxStock = p ? p.stock : 10;
+
+      const newQty = cart[idx].qty + delta;
+      if (newQty <= 0) {
+        cart.splice(idx, 1);
+      } else if (newQty <= maxStock) {
+        cart[idx].qty = newQty;
+      } else {
+        showToast('Stok Terbatas', `Hanya tersedia ${maxStock} unit.`, 'error');
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function removeCartItem(cartKey) {
+      cart = cart.filter(c => c.cartKey !== cartKey);
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cartItemsContainer');
+      const checkoutSection = document.getElementById('cartCheckoutSection');
+      const footer = document.getElementById('cartFooter');
+      const badge = document.getElementById('cartBadge');
+
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      badge.textContent = totalQty;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 px-4 rounded-2xl bg-obsidian-950/60 border border-white/10">
+            <i data-lucide="shopping-bag" class="w-10 h-10 text-platinum-500 mx-auto mb-3"></i>
+            <p class="text-sm font-bold text-white">Keranjang Anda Masih Kosong</p>
+            <p class="text-xs text-platinum-400 mt-1">Pilih laptop impian Anda dari katalog untuk memulai pemesanan.</p>
+          </div>
+        `;
+        checkoutSection.classList.add('hidden');
+        footer.classList.add('hidden');
+        lucide.createIcons();
+        return;
+      }
+
+      checkoutSection.classList.remove('hidden');
+      footer.classList.remove('hidden');
+
+      let grandTotal = 0;
+
+      container.innerHTML = cart.map(item => {
+        const p = products.find(prod => prod.id === item.productId);
+        if (!p) return '';
+
+        const chosenUpgrades = item.upgradeIds.map(uid => UPGRADE_OPTIONS.find(u => u.id === uid)).filter(Boolean);
+        const upgradesCost = chosenUpgrades.reduce((s, u) => s + u.price, 0);
+        const unitTotal = p.promoPrice + upgradesCost;
+        const lineTotal = unitTotal * item.qty;
+        grandTotal += lineTotal;
+
+        return `
+          <div class="p-3.5 rounded-xl bg-obsidian-950 border border-white/10 space-y-2.5">
+            <div class="flex gap-3">
+              <img src="${p.image}" onerror="this.onerror=null;this.src=getFallbackHardwareSVG('${p.name}');" class="w-16 h-14 rounded-lg object-cover border border-white/10 shrink-0">
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-bold text-white leading-snug line-clamp-2">${p.name}</p>
+                <p class="text-[11px] text-champagne-400 mt-0.5">${p.condition}</p>
+                ${chosenUpgrades.length > 0 ? `
+                  <ul class="mt-1 space-y-0.5">
+                    ${chosenUpgrades.map(u => `<li class="text-[10px] text-platinum-300">+ ${u.label}</li>`).join('')}
+                  </ul>
+                ` : ''}
+              </div>
+              <button onclick="removeCartItem('${item.cartKey}')" class="text-platinum-500 hover:text-red-400 self-start p-1" title="Hapus">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-white/5">
+              <span class="font-mono text-xs font-bold text-white">${formatRupiah(lineTotal)}</span>
+              <div class="flex items-center gap-2 bg-obsidian-900 rounded-lg border border-white/10 px-1.5 py-0.5">
+                <button onclick="updateCartQty('${item.cartKey}', -1)" class="w-6 h-6 flex items-center justify-center text-platinum-300 hover:text-white font-bold">-</button>
+                <span class="font-mono text-xs font-bold text-white w-5 text-center">${item.qty}</span>
+                <button onclick="updateCartQty('${item.cartKey}', 1)" class="w-6 h-6 flex items-center justify-center text-platinum-300 hover:text-white font-bold">+</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('cartSubtotalDisplay').textContent = formatRupiah(grandTotal);
+      lucide.createIcons();
+    }
+
+    function processWhatsAppCheckout() {
+      if (cart.length === 0) return;
+
+      const name = document.getElementById('checkoutName').value.trim();
+      const phone = document.getElementById('checkoutPhone').value.trim();
+      const shipping = document.getElementById('checkoutShipping').value;
+      const notes = document.getElementById('checkoutNotes').value.trim();
+      const reqOS = document.getElementById('reqInstallOS').checked;
+      const reqVideo = document.getElementById('reqVideoQC').checked;
+
+      if (!name || !phone) {
+        showToast('Data Belum Lengkap', 'Mohon isi Nama Lengkap dan Nomor WhatsApp Anda sebelum melanjutkan.', 'error');
+        return;
+      }
+
+      // Generate unique transaction code & save to local warranty tracker
+      const randomDigits = Math.floor(100 + Math.random() * 899);
+      const orderCode = `VLD-2026-${randomDigits}`;
+
+      let grandTotal = 0;
+      const itemSummaries = [];
+
+      const formattedItemsText = cart.map((item, idx) => {
+        const p = products.find(prod => prod.id === item.productId);
+        if (!p) return '';
+
+        const chosenUpgrades = item.upgradeIds.map(uid => UPGRADE_OPTIONS.find(u => u.id === uid)).filter(Boolean);
+        const upgradesCost = chosenUpgrades.reduce((s, u) => s + u.price, 0);
+        const unitTotal = p.promoPrice + upgradesCost;
+        const lineTotal = unitTotal * item.qty;
+        grandTotal += lineTotal;
+
+        itemSummaries.push(`${p.name} (${item.qty}x)`);
+
+        let block = `${idx + 1}. *${p.name}* (${item.qty}x)\n` +
+                    `   • Kondisi: ${p.condition} | Garansi: ${p.warranty}\n`;
+        if (chosenUpgrades.length > 0) {
+          block += `   • Opsi Upgrade: ${chosenUpgrades.map(u => u.label).join(', ')}\n`;
+        }
+        block += `   • Subtotal: ${formatRupiah(lineTotal)}`;
+        return block;
+      }).join('\n\n');
+
+      const requests = [];
+      if (reqOS) requests.push('Install ulang OS + Office siap pakai');
+      if (reqVideo) requests.push('Request video cek fisik & battery health sebelum kirim');
+
+      // Store order record locally so buyer can test Cek Garansi immediately
+      const todayStr = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' });
+      ordersHistory[orderCode] = {
+        code: orderCode,
+        customer: name,
+        items: itemSummaries.join(', '),
+        status: 'Menunggu Konfirmasi Admin via WA',
+        date: todayStr,
+        warrantyUntil: 'Aktif otomatis setelah serah terima unit',
+        notes: `Metode: ${shipping}${notes ? ' • Catatan: ' + notes : ''}`
+      };
+      localStorage.setItem(STORAGE_KEYS.ORDERS, JSON.stringify(ordersHistory));
+
+      const waMessage =
+        `Halo Admin *${storeSettings.storeName}*,\n` +
+        `Saya ingin melakukan pemesanan unit berikut:\n\n` +
+        `🧾 *KODE PESANAN:* \`${orderCode}\`\n` +
+        `👤 *Nama Pemesan:* ${name}\n` +
+        `📱 *No. WhatsApp:* ${phone}\n` +
+        `🚚 *Metode:* ${shipping}\n\n` +
+        `💻 *DETAIL PESANAN:*\n${formattedItemsText}\n\n` +
+        `🛠️ *Request Teknis:* ${requests.length > 0 ? requests.join('; ') : 'Standar'}\n` +
+        `📝 *Catatan:* ${notes || '-'}\n\n` +
+        `💰 *ESTIMASI TOTAL: ${formatRupiah(grandTotal)}*\n\n` +
+        `Mohon konfirmasi ketersediaan unit & nomor rekening resmi ${storeSettings.storeName}. Terima kasih!`;
+
+      const waUrl = `https://wa.me/${storeSettings.whatsappNumber}?text=${encodeURIComponent(waMessage)}`;
+      window.open(waUrl, '_blank');
+
+      showToast('Pesanan Diteruskan ke WA', `Kode transaksi ${orderCode} tersimpan dan dapat dilacak di menu Cek Garansi.`, 'success');
+    }
+
+    // ==================== 12. WARRANTY / ORDER TRACKER & FAQ ====================
+    function fillAndCheckCode(code) {
+      document.getElementById('warrantyCodeInput').value = code;
+      checkWarrantyStatus();
+    }
+
+    function checkWarrantyStatus() {
+      const code = document.getElementById('warrantyCodeInput').value.trim().toUpperCase();
+      const box = document.getElementById('warrantyResultBox');
+
+      if (!code) {
+        showToast('Masukkan Kode', 'Silakan masukkan kode transaksi contoh VLD-2026-881.', 'error');
+        return;
+      }
+
+      const record = ordersHistory[code];
+      box.classList.remove('hidden');
+
+      if (!record) {
+        box.innerHTML = `
+          <div class="flex items-start gap-2.5 text-red-300">
+            <i data-lucide="alert-triangle" class="w-4 h-4 shrink-0 mt-0.5"></i>
+            <div>
+              <p class="text-xs font-bold">Kode Transaksi "${code}" Tidak Ditemukan</p>
+              <p class="text-[11px] text-platinum-400 mt-0.5">Pastikan format kode benar (misal: VLD-2026-881) atau hubungi WhatsApp admin kami.</p>
+            </div>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      box.innerHTML = `
+        <div class="flex items-center justify-between border-b border-white/10 pb-2">
+          <span class="font-mono text-xs font-bold text-champagne-400">${record.code}</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">${record.status}</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <p class="text-platinum-300"><span class="text-platinum-500">Pemilik:</span> <strong class="text-white">${record.customer}</strong> (${record.date})</p>
+          <p class="text-platinum-300"><span class="text-platinum-500">Unit:</span> ${record.items}</p>
+          <p class="text-platinum-300"><span class="text-platinum-500">Masa Garansi:</span> <span class="text-champagne-300 font-semibold">${record.warrantyUntil}</span></p>
+          <p class="text-[11px] text-platinum-400 pt-1 italic">${record.notes}</p>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function toggleFaq(index) {
+      const content = document.getElementById(`faqContent${index}`);
+      const icon = document.getElementById(`faqIcon${index}`);
+      const isHidden = content.classList.contains('hidden');
+
+      content.classList.toggle('hidden', !isHidden);
+      icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+
+    // ==================== 13. ADMIN PANEL MANAGEMENT ====================
+    function openAdminAccess() {
+      document.getElementById('adminModal').classList.remove('hidden');
+      if (isAdminAuthenticated) {
+        showAdminDashboard();
+      } else {
+        document.getElementById('adminPinScreen').classList.remove('hidden');
+        document.getElementById('adminDashboardContent').classList.add('hidden');
+        setTimeout(() => document.getElementById('adminPinInput').focus(), 100);
+      }
+      lucide.createIcons();
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.add('hidden');
+      if (window.location.hash === '#admin') {
+        history.replaceState(null, null, ' ');
+      }
+    }
+
+    function verifyAdminPin() {
+      const pin = document.getElementById('adminPinInput').value.trim();
+      if (pin === '1234') {
+        isAdminAuthenticated = true;
+        document.getElementById('adminPinInput').value = '';
+        showAdminDashboard();
+        showToast('Akses Admin Diberikan', 'Selamat datang di panel manajemen katalog Rizky Tech.', 'success');
+      } else {
+        showToast('PIN Salah', 'Gunakan PIN default: 1234', 'error');
+      }
+    }
+
+    function showAdminDashboard() {
+      document.getElementById('adminPinScreen').classList.add('hidden');
+      document.getElementById('adminDashboardContent').classList.remove('hidden');
+
+      // Populate settings inputs
+      document.getElementById('adminStoreNameInput').value = storeSettings.storeName;
+      document.getElementById('adminStoreTaglineInput').value = storeSettings.tagline;
+      document.getElementById('adminStoreWAInput').value = storeSettings.whatsappNumber;
+      document.getElementById('adminStoreAddressInput').value = storeSettings.address;
+
+      renderAdminProductTable();
+      lucide.createIcons();
+    }
+
+    function saveStoreSettings() {
+      const name = document.getElementById('adminStoreNameInput').value.trim();
+      const tagline = document.getElementById('adminStoreTaglineInput').value.trim();
+      const wa = document.getElementById('adminStoreWAInput').value.trim().replace(/[^0-9]/g, '');
+      const address = document.getElementById('adminStoreAddressInput').value.trim();
+
+      if (!name || !wa) {
+        showToast('Validasi Gagal', 'Nama toko dan Nomor WA Admin wajib diisi.', 'error');
+        return;
+      }
+
+      storeSettings = {
+        storeName: name,
+        tagline: tagline || 'Luxury Hardware Atelier',
+        whatsappNumber: wa,
+        address: address || 'Indonesia'
+      };
+
+      localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(storeSettings));
+      applyStoreSettingsToUI();
+      showToast('Pengaturan Disimpan', `Checkout WhatsApp kini diarahkan ke +${wa}.`, 'success');
+    }
+
+    function renderAdminProductTable() {
+      const tbody = document.getElementById('adminProductTableBody');
+      document.getElementById('adminProductCount').textContent = products.length;
+
+      tbody.innerHTML = products.map(p => `
+        <tr class="hover:bg-white/[0.02]">
+          <td class="px-4 py-3 font-semibold text-white">
+            <div>${p.name}</div>
+            <div class="text-[11px] text-platinum-400 font-normal">${p.cpu} • ${p.ram}/${p.storage}</div>
+          </td>
+          <td class="px-4 py-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold ${p.condition === 'Baru Resmi' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-champagne-500/20 text-champagne-300'}">${p.condition}</span>
+            <div class="text-[11px] text-platinum-400 mt-1">${p.category}</div>
+          </td>
+          <td class="px-4 py-3 font-mono font-bold text-champagne-400">${formatRupiah(p.promoPrice)}</td>
+          <td class="px-4 py-3 font-mono text-white">${p.stock}</td>
+          <td class="px-4 py-3 text-right space-x-1.5 whitespace-nowrap">
+            <button onclick="editAdminProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-champagne-500/20 text-champagne-300 border border-white/10 transition">Edit</button>
+            <button onclick="deleteAdminProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-300 border border-red-500/20 transition">Hapus</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function handleAdminProductSubmit(e) {
+      e.preventDefault();
+
+      const editId = document.getElementById('editProductId').value;
+      const productObj = {
+        id: editId || 'lp-' + Date.now(),
+        name: document.getElementById('prodName').value.trim(),
+        category: document.getElementById('prodCategory').value,
+        condition: document.getElementById('prodCondition').value,
+        cpu: document.getElementById('prodCpu').value.trim(),
+        gpu: document.getElementById('prodGpu').value.trim(),
+        ram: document.getElementById('prodRam').value.trim(),
+        storage: document.getElementById('prodStorage').value.trim(),
+        display: document.getElementById('prodDisplay').value.trim(),
+        batteryWeight: document.getElementById('prodBatteryWeight').value.trim(),
+        normalPrice: Number(document.getElementById('prodNormalPrice').value) || 0,
+        promoPrice: Number(document.getElementById('prodPromoPrice').value) || 0,
+        stock: Number(document.getElementById('prodStock').value) || 0,
+        warranty: document.getElementById('prodWarranty').value.trim(),
+        idealFor: document.getElementById('prodIdealFor').value,
+        image: document.getElementById('prodImage').value.trim() || 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80',
+        description: 'Unit pilihan terkurasi dengan standar inspeksi kualitas tinggi dari showroom kami.'
+      };
+
+      if (editId) {
+        const idx = products.findIndex(p => p.id === editId);
+        if (idx > -1) {
+          productObj.description = products[idx].description;
+          products[idx] = productObj;
+        }
+        showToast('Produk Diperbarui', `${productObj.name} berhasil diupdate.`, 'success');
+      } else {
+        products.unshift(productObj);
+        showToast('Unit Baru Ditambahkan', `${productObj.name} kini tayang di katalog.`, 'success');
+      }
+
+      saveProductsToStorage();
+      resetAdminProductForm();
+      renderAdminProductTable();
+      renderCatalog();
+      populateInstallmentDropdown();
+    }
+
+    function editAdminProduct(id) {
+      const p = products.find(item => item.id === id);
+      if (!p) return;
+
+      document.getElementById('editProductId').value = p.id;
+      document.getElementById('prodName').value = p.name;
+      document.getElementById('prodCategory').value = p.category;
+      document.getElementById('prodCondition').value = p.condition;
+      document.getElementById('prodCpu').value = p.cpu;
+      document.getElementById('prodGpu').value = p.gpu;
+      document.getElementById('prodRam').value = p.ram;
+      document.getElementById('prodStorage').value = p.storage;
+      document.getElementById('prodDisplay').value = p.display;
+      document.getElementById('prodBatteryWeight').value = p.batteryWeight;
+      document.getElementById('prodNormalPrice').value = p.normalPrice;
+      document.getElementById('prodPromoPrice').value = p.promoPrice;
+      document.getElementById('prodStock').value = p.stock;
+      document.getElementById('prodWarranty').value = p.warranty;
+      document.getElementById('prodIdealFor').value = p.idealFor;
+      document.getElementById('prodImage').value = p.image;
+
+      document.getElementById('adminFormTitle').innerHTML = `<i data-lucide="edit-3" class="w-4 h-4"></i><span>Edit Unit: ${p.name}</span>`;
+      document.getElementById('adminSubmitProductBtn').textContent = 'Simpan Perubahan Unit';
+      document.getElementById('cancelEditProductBtn').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function resetAdminProductForm() {
+      document.getElementById('adminProductForm').reset();
+      document.getElementById('editProductId').value = '';
+      document.getElementById('adminFormTitle').innerHTML = `<i data-lucide="plus-circle" class="w-4 h-4"></i><span>Tambah Unit Laptop Baru</span>`;
+      document.getElementById('adminSubmitProductBtn').textContent = 'Simpan Unit ke Katalog';
+      document.getElementById('cancelEditProductBtn').classList.add('hidden');
+      lucide.createIcons();
+    }
+
+    function deleteAdminProduct(id) {
+      const target = products.find(p => p.id === id);
+      products = products.filter(p => p.id !== id);
+      compareIds = compareIds.filter(cid => cid !== id);
+      saveProductsToStorage();
+      renderAdminProductTable();
+      renderCatalog();
+      updateCompareFloatingBar();
+      populateInstallmentDropdown();
+      showToast('Produk Dihapus', `${target ? target.name : 'Unit'} telah dihapus dari katalog.`, 'gold');
+    }
+
+    function resetCatalogToDefault() {
+      products = [...DEFAULT_PRODUCTS];
+      saveProductsToStorage();
+      renderAdminProductTable();
+      renderCatalog();
+      populateInstallmentDropdown();
+      showToast('Katalog Direset', 'Seluruh data katalog dikembalikan ke 8 produk awal.', 'success');
+    }
+  </script>
+</body>
+</html>
